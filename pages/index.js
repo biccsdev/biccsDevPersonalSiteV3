@@ -4,10 +4,24 @@ import Link from 'next/link';
 import Layout from '../components/layout'
 import styles from '../styles/Home.module.css'
 
+import dynamic from "next/dynamic";
+const Animator = dynamic(
+  import("react-scroll-motion").then((it) => it.Animator),
+  { ssr: false }
+);
+
+import { ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
+
+import { useEffect } from 'react';
+
 Home.siteTitle = "";
 Home.description = "hi";
 Home.faviconUrl = "public/home.ico";
 export default function Home() {
+
+  const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+  const FadeUp = batch(Fade(), Move(), Sticky());
+
   return (
     <Layout home>
       <Head>
@@ -29,34 +43,91 @@ export default function Home() {
           property="og:image"
           content="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
         />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" />
       </Head>
-      <div className={styles.bodyContainer}>
-        <div className={styles.sectionContainer}>
-          <h1>Are you looking for a dev who?</h1>
-        </div>
+      <ScrollContainer>
+        <ScrollPage>
+          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+            <h1 className={styles.textContainer}>Hi 👋🏽, I'm Victor Torres, a software engineer based in Mexico.</h1>
+            <h1 style={{ fontSize: "30px", color: "#222823" }}>If you need a dev who can...</h1>
+          </Animator>
+        </ScrollPage>
+        <ScrollPage>
+          <Animator animation={ZoomInScrollOut}>
+            <h2 style={{ fontSize: "40px", color: "#222823" }}>Design solutions for your problems...</h2>
+          </Animator>
+        </ScrollPage>
+        <ScrollPage>
+          <Animator animation={FadeUp}>
+            <h2 style={{ fontSize: "40px", color: "#222823" }}>Communicate effectively and take action...</h2>
+          </Animator>
+        </ScrollPage>
+        <ScrollPage>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} >
 
-        <div className={styles.textContainer}>
-          <div className={styles.sectionContainer}>
-            <h2>Brings new ideas to life...</h2>
+            <h2 style={{ fontSize: "40px", color: "#222823" }}>
+              <Animator animation={MoveIn(-1000, 0)}>Build:</Animator>
+              <Animator animation={MoveIn(1000, 0)}>- Apis</Animator>
+              <Animator animation={MoveOut(1000, 0)}>- Tests</Animator>
+              <Animator animation={MoveOut(-1000, 0)}>- Websites</Animator>
+              <Animator animation={MoveIn(1000, 0)}>- Systems</Animator>
+              <Animator animation={MoveIn(1000, 0)}>-  Frontend & Backend</Animator>
+              <Animator animation={MoveOut(-1000, 0)}>- Following best practices</Animator>
+              <Animator animation={MoveOut(-1000, 0)}>and well documented...</Animator>
+
+            </h2>
+            {/* <Animator animation={ZoomInScrollOut}>
+              <h2 style={{ fontSize: "40px", color: "#222823" }}>
+                Build:
+              </h2>
+            </Animator>
+
+            <Animator animation={ZoomInScrollOut}>
+              <h2 style={{ fontSize: "40px", color: "#222823" }}>
+                - Apis
+              </h2>
+            </Animator>
+
+            <Animator animation={ZoomInScrollOut}>
+              <h2 style={{ fontSize: "40px", color: "#222823" }}>
+                - Tests
+              </h2>
+            </Animator>
+
+            <Animator animation={ZoomInScrollOut}>
+              <h2 style={{ fontSize: "40px", color: "#222823" }}>
+                - Websites
+              </h2>
+            </Animator>
+
+            <Animator animation={ZoomInScrollOut}>
+              <h2 style={{ fontSize: "40px", color: "#222823" }}>
+                - Systems
+              </h2>
+            </Animator>
+
+            <Animator animation={ZoomInScrollOut}>
+              <h2 style={{ fontSize: "40px", color: "#222823" }}>
+                - Frontend & Backend
+                following best practices and well documented...
+              </h2>
+            </Animator> */}
           </div>
-
-          <div className={styles.sectionContainer}>
-            <h2>Designs solutions for your problems...</h2>
-          </div>
-
-          <div className={styles.sectionContainer}>
-            <h2>Builds APIs, Websites and systems that follow best practices and are well documented...</h2>
-          </div>
-
-          <div className={styles.sectionContainer}>
-            <h1>well... let's get in touch!</h1>
+        </ScrollPage>
+        <ScrollPage>
+          <Animator animation={batch(Fade(), Sticky())}>
+            <h1 style={{ fontSize: "40px", color: "#222823" }}>Well...</h1>
+            <br />
+            <h1 style={{ fontSize: "30px", color: "#222823" }}>
+              let's get in touch!
+            </h1>
             <div className={styles.buttonsContainer}>
-              <input></input>
-              <Link href="/about">ABOUT ME</Link>
+              <button><Link href="/about">About Me</Link></button>
+              <button>Contact</button>
             </div>
-          </div>
-        </div>
-      </div>
+          </Animator>
+        </ScrollPage>
+      </ScrollContainer>
     </Layout>
   )
 }
