@@ -1,0 +1,32 @@
+.main {
+  --back: #222823;
+  --text: #fffaff;
+  --highlight: #7ae582;
+  --secondHighlight: #5d2e8c;
+  font-family: "Roboto";
+  color: var(--back);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.buttonContainer {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: var(--secondHighlight);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 25px;
+}

@@ -3,14 +3,79 @@
     --text: #fffaff;
     --highlight: #7ae582;
     --secondHighlight: #5D2E8C;
+    font-family: 'Roboto';
 }
 
 .textContainer {
-  font-size: 30px;
-  color: #222823;
-  -webkit-mask-image: url(textBackground.gif);
-  mask-image: url(textBackground.gif);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  width: 80%;
+  font-size: 45px;
+  color: #222823;  
 }
 
+.maskContainer {
+  background-image: url("/purpleBackground.gif");
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button52:after {
+  content: "";
+  background-color: var(--secondHighlight);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button52 {
+    padding: 13px 50px 13
+  }
+  .textContainer{
+    font-size: 65px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .textContainer{
+    font-size: 80px;
+  }
+}
+
+
+/* @media (min-width: 1440px) {
+  .textContainer{
+    font-size: 10px;
+  }
+} */
+
+
+/* @media (min-width: 2560px) {
+  .textContainer{
+    font-size: 200px;
+  }
+} */

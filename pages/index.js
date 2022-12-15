@@ -48,82 +48,54 @@ export default function Home() {
       <ScrollContainer>
         <ScrollPage>
           <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-            <h1 className={styles.textContainer}>Hi 👋🏽, I'm Victor Torres, a software engineer based in Mexico.</h1>
-            <h1 style={{ fontSize: "30px", color: "#222823" }}>If you need a dev who can...</h1>
+            <h1 className={styles.textContainer}>Hi 👋🏽, I'm Victor Torres, a <span className={styles.maskContainer}>SOFTWARE ENGINEER</span> based in Mexico.</h1>
+          </Animator>
+        </ScrollPage>
+        <ScrollPage>
+          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+            <h1 className={styles.textContainer}>If you need a <span className={styles.maskContainer}>DEV</span> who can...</h1>
           </Animator>
         </ScrollPage>
         <ScrollPage>
           <Animator animation={ZoomInScrollOut}>
-            <h2 style={{ fontSize: "40px", color: "#222823" }}>Design solutions for your problems...</h2>
+            <h2 className={styles.textContainer}>Design <span className={styles.maskContainer}>solutions</span> for your <span className={styles.maskContainer}>problems</span>...</h2>
           </Animator>
         </ScrollPage>
         <ScrollPage>
           <Animator animation={FadeUp}>
-            <h2 style={{ fontSize: "40px", color: "#222823" }}>Communicate effectively and take action...</h2>
+            <h2 className={styles.textContainer}>Communicate<span className={styles.maskContainer}> effectively</span> and <span className={styles.maskContainer}>take action</span>...</h2>
           </Animator>
         </ScrollPage>
         <ScrollPage>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} >
 
-            <h2 style={{ fontSize: "40px", color: "#222823" }}>
-              <Animator animation={MoveIn(-1000, 0)}>Build:</Animator>
+            <h2 className={styles.textContainer}>
+              <Animator animation={MoveIn(-1000, 0)}><span className={styles.maskContainer}>Build</span>:</Animator>
               <Animator animation={MoveIn(1000, 0)}>- Apis</Animator>
-              <Animator animation={MoveOut(1000, 0)}>- Tests</Animator>
               <Animator animation={MoveOut(-1000, 0)}>- Websites</Animator>
               <Animator animation={MoveIn(1000, 0)}>- Systems</Animator>
               <Animator animation={MoveIn(1000, 0)}>-  Frontend & Backend</Animator>
-              <Animator animation={MoveOut(-1000, 0)}>- Following best practices</Animator>
-              <Animator animation={MoveOut(-1000, 0)}>and well documented...</Animator>
-
             </h2>
-            {/* <Animator animation={ZoomInScrollOut}>
-              <h2 style={{ fontSize: "40px", color: "#222823" }}>
-                Build:
-              </h2>
-            </Animator>
-
-            <Animator animation={ZoomInScrollOut}>
-              <h2 style={{ fontSize: "40px", color: "#222823" }}>
-                - Apis
-              </h2>
-            </Animator>
-
-            <Animator animation={ZoomInScrollOut}>
-              <h2 style={{ fontSize: "40px", color: "#222823" }}>
-                - Tests
-              </h2>
-            </Animator>
-
-            <Animator animation={ZoomInScrollOut}>
-              <h2 style={{ fontSize: "40px", color: "#222823" }}>
-                - Websites
-              </h2>
-            </Animator>
-
-            <Animator animation={ZoomInScrollOut}>
-              <h2 style={{ fontSize: "40px", color: "#222823" }}>
-                - Systems
-              </h2>
-            </Animator>
-
-            <Animator animation={ZoomInScrollOut}>
-              <h2 style={{ fontSize: "40px", color: "#222823" }}>
-                - Frontend & Backend
-                following best practices and well documented...
-              </h2>
-            </Animator> */}
+          </div>
+        </ScrollPage>
+        <ScrollPage>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} >
+            <h2 className={styles.textContainer}>
+              <Animator animation={MoveOut(-1000, 0)}>- Following <span className={styles.maskContainer}>best practices</span></Animator>
+              <Animator animation={MoveOut(-1000, 0)}>and <span className={styles.maskContainer}>well documented</span>...</Animator>
+            </h2>
           </div>
         </ScrollPage>
         <ScrollPage>
           <Animator animation={batch(Fade(), Sticky())}>
-            <h1 style={{ fontSize: "40px", color: "#222823" }}>Well...</h1>
+            <h1 className={styles.textContainer}><span className={styles.maskContainer}>Well</span>...</h1>
             <br />
-            <h1 style={{ fontSize: "30px", color: "#222823" }}>
+            <h1 className={styles.textContainer}>
               let's get in touch!
             </h1>
             <div className={styles.buttonsContainer}>
-              <button><Link href="/about">About Me</Link></button>
-              <button>Contact</button>
+              <button className={styles.button52} role='button'><Link href="/about">About Me</Link></button>
+              <button className={styles.button52} role='button'><Link href='/contact'>Contact</Link></button>
             </div>
           </Animator>
         </ScrollPage>
