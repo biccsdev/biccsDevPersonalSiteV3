@@ -1,0 +1,12 @@
+.mainContainer {
+  --back: #222823;
+  --text: #fffaff;
+  --highlight: #7ae582;
+  --secondHighlight: #5d2e8c;
+  font-family: "Roboto";
+  color: var(--back);
+}
+
+.more {
+  display: none;
+}
