@@ -4,6 +4,8 @@ import Layout from '../components/layout'
 import styles from '../styles/About.module.css'
 
 import pfp from '../public/pfp.png';
+import downloadIcon from '../public/downloadIcon.png';
+
 import { useEffect, useState } from 'react';
 
 export default function About() {
@@ -11,9 +13,10 @@ export default function About() {
     const [helper, setHelper] = useState(false);
 
 
+    //This is a helper function that changes the value of a state variable on button click
+    // in order to summon useEffect and display the about me info
     const myFunction = () => {
-        setHelper(true);
-        console.log(helper);
+        helper ? setHelper(false) : setHelper(true);
     }
 
     useEffect(() => {
@@ -22,12 +25,10 @@ export default function About() {
         var btnText = document.getElementById("myBtn");
 
         if (dots.style.display === "none") {
-            console.log('none')
             dots.style.display = "inline";
             btnText.innerHTML = "Read more";
             moreText.style.display = "none";
         } else {
-            console.log('else')
             dots.style.display = "none";
             btnText.innerHTML = "Read less";
             moreText.style.display = "inline";
@@ -68,10 +69,10 @@ export default function About() {
                                 Also I have a keen interest in virtual reality and where I'm currently exploring the potential for blockchain-based applications within the virtual reality sphere. I'm particularly interested in the potential for virtual reality to facilitate the development of new and innovative applications across all industries.
 
                                 I'm committed to helping people understand the potential of blockchain technology, cryptocurrencies, and virtual reality, and constantly looking for new ways to use these technologies to improve people's lives. I'm an active member of the web3 community and always looking for new ways to contribute to the development of the industry..</span></p>
-                        <button onClick={() => myFunction()} id="myBtn">Read more</button>
+                        <button className={styles.readButton} onClick={() => myFunction()} id="myBtn">Read more</button>
                     </div>
-
                 </div>
+                <button className={styles.buttonResume}>Download Resume <span className={styles.buttonSpan}></span></button>
             </main>
         </Layout>
     )

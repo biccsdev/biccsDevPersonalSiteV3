@@ -10,3 +10,21 @@
 .more {
   display: none;
 }
+
+.readButton {
+  background-color: var(--secondHighlight);
+}
+
+.buttonResume {
+  background-color: var(--secondHighlight);
+}
+
+.buttonSpan {
+  margin-top: 5px;
+  margin-left: 10px;
+  display: inline-block;
+  background-image: url("../public/downloadIcon.png");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
