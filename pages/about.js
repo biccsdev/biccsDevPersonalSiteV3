@@ -156,7 +156,7 @@ export default function About() {
                     </a>
                     <a href='https://docs.solana.com/developing/clients/javascript-api' target='_blank' className={styles.techContainer}>
                         <Image src={'/techStackLogos/solanaLogo.png'} width={48} height={48} alt='Solana logo' />
-                        <h3>Solana/Web3JS</h3>
+                        <h3>Web3JS</h3>
                     </a>
                     <a href='https://en.wikipedia.org/wiki/SQL' target='_blank' className={styles.techContainer}>
                         <Image src={'/techStackLogos/sqlLogo.png'} width={48} height={48} alt='SQL logo' />
@@ -202,7 +202,7 @@ export default function About() {
                     </ul>
                     <h2>Art</h2>
                     <h3>Another thing I enjoy doing is learning about art and practicing it...</h3>
-                    <h3>Here are some of my Pixel Art creations as well as my most recent 3D Model made in blender.</h3>
+                    <h3>Here are some of my Pixel Art creations.</h3>
                     <div className={styles.hobbiesImagesContainer}>
                         <Image src={'/hobbies/bvdbytes.png'} height={200} width={300} alt="bvdcat street pixel art made by biccs" />
                         <Image src={'/hobbies/forestBackground.png'} height={200} width={300} alt="pixel art forest made by biccs" />
@@ -214,6 +214,7 @@ export default function About() {
                     <ul>
                         <li>Going to the gym - exercising the body keeps the mind active</li>
                         <li>Playing basketball - I've played basketball since elementary school, won several state championships in middle school and got 3rd place at a national tournament in highschool - ball is life</li>
+                        <li>Virtual reality - ever since I got in touch with virtual reality it's been one of my favorites technologies one can get their hands on right now, it allows us to create and experience so many thing we simply cannot without it</li>
                     </ul>
                 </div>
             </main>

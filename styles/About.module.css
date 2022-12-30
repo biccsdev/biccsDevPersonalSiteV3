@@ -5,6 +5,8 @@
   --secondHighlight: #5d2e8c;
   font-family: "Roboto";
   color: var(--back);
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .more {
@@ -17,6 +19,8 @@
 
 .buttonResume {
   background-color: var(--secondHighlight);
+  font-size: 1.5rem;
+  margin: 2rem;
 }
 
 .buttonSpan {
@@ -27,4 +31,57 @@
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
+}
+
+.aboutMeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutMeContainer h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.downloadResumeContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.techStackContainer h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.techStackContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.techStackContainer a {
+  width: 33%;
+  text-align: center;
+}
+
+.socialsContainer h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.socialsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socialsContainer a {
+  width: 33%;
+  text-align: center;
+}
+
+.hobbiesContainer h1 {
+  text-align: center;
+  width: 100%;
 }
