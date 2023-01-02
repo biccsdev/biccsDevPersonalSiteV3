@@ -213,8 +213,8 @@ export default function About() {
                     <h3>Other stuff...</h3>
                     <ul>
                         <li>Going to the gym - exercising the body keeps the mind active</li>
-                        <li>Playing basketball - I've played basketball since elementary school, won several state championships in middle school and got 3rd place at a national tournament in highschool - ball is life</li>
-                        <li>Virtual reality - ever since I got in touch with virtual reality it's been one of my favorites technologies one can get their hands on right now, it allows us to create and experience so many thing we simply cannot without it</li>
+                        <li>Playing basketball - I've played basketball since elementary school, won several state championships, went to a international tournament representing Mexico in Las Vegas and got 3rd place at a national tournament - ball is life</li>
+                        <li>Virtual reality - ever since I got in touch with virtual reality it's been one of my favorites technologies one can get their hands on right now, it allows us to create and experience so many things we simply cannot without it</li>
                     </ul>
                 </div>
             </main>
