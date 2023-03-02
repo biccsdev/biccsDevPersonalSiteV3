@@ -1,15 +1,15 @@
 .main {
-  --back: #222823;
-  --text: #fffaff;
+  --backDark: #222823;
+  --backLight: #fffaff;
   --highlight: #7ae582;
-  --secondHighlight: #5d2e8c;
+  --text: #5d2e8c;
 }
 
 .main {
   min-height: 100vh;
   font-family: "PressStart2P", sans-serif;
-  color: var(--secondHighlight);
-  background-color: var(--text);
+  color: var(--text);
+  background-color: var(--backLight);
 }
 
 .headerContainer {
@@ -17,18 +17,34 @@
   position: sticky;
   min-height: fit-content;
   width: 100%;
+  height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--back);
-  z-index: 1;
+  background-color: var(--backLight);
+  z-index: 2;
 }
 
 .menuItems {
   width: 100%;
   display: flex;
   font-size: 0.7rem;
-  justify-content: space-around;
+}
+
+.menuItems h1 {
+  margin-left: 40px;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  font-size: 0.6rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.items a {
+  margin-right: 40px;
 }
 
 .selected {
@@ -41,6 +57,15 @@
 
 .checkbox {
   display: none;
+}
+
+@media (max-width: 769px) {
+  .menuItems h1 {
+    margin-left: 0px;
+  }
+  .items {
+    font-size: 0.4rem;
+  }
 }
 
 @media (max-width: 426px) {
@@ -97,11 +122,15 @@
 
   .headerContainer .menuItems {
     padding-top: 445px;
-    box-shadow: inset 0 0 2000px #222823;
+    background-color: var(--backLight);
+    border-color: #7ae582;
+    border-style: solid;
+    border-width: 7px;
     width: 100%;
     position: relative;
     transform: translate(-150%);
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     transition: transform 0.5s ease-in-out;
     text-align: center;
@@ -110,6 +139,15 @@
   .menuItems a {
     font-size: 1rem;
     font-weight: 500;
+  }
+
+  .items h1 {
+    margin-left: 40px;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
   }
 
   input[type="checkbox"]:checked ~ .menuItems {

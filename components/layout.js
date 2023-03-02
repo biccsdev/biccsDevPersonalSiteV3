@@ -33,25 +33,29 @@ export default function Layout({ children, home, about, projects, blogs, archive
                         <span className={`${styles.line} ${styles.line3}`}></span>
                     </div>
                     <div className={styles.menuItems}>
-                        <a href='/'>
-                            <h1 className={styles.selected}>HOME</h1>
-                        </a>
-                        <a href='/about'>
-                            <h1>ABOUT ME</h1>
-                        </a>
-                        <a href='/projects'>
-                            <h1>PROJECTS</h1>
-                        </a>
-                        <a href='/blogs'>
-                            <h1>BLOGS</h1>
-                        </a>
-                        <a href='/archives'>
-                            <h1>ARCHIVES</h1>
-                        </a>
+                        <h1 style={{ fontSize: '40px' }}>biccs<span style={{ color: '#7ae582' }}>dev</span></h1>
+                        <div className={styles.items}>
+                            <a href='/'>
+                                <h1 className={styles.selected}>HOME</h1>
+                            </a>
+                            <a href='/about'>
+                                <h1>ABOUT ME</h1>
+                            </a>
+                            <a href='/projects'>
+                                <h1>PROJECTS</h1>
+                            </a>
+                            <a href='/blogs'>
+                                <h1>BLOGS</h1>
+                            </a>
+                            <a href='/archives'>
+                                <h1>ARCHIVES</h1>
+                            </a>
+                        </div>
                     </div>
                 </header>
             }
-            {(about) &&
+            {
+                (about) &&
                 <header className={styles.headerContainer}>
                     <input className={styles.checkbox} type="checkbox" name="" id="" />
                     <div className={styles.hamburgerLines}>
@@ -60,25 +64,30 @@ export default function Layout({ children, home, about, projects, blogs, archive
                         <span className={`${styles.line} ${styles.line3}`}></span>
                     </div>
                     <div className={styles.menuItems}>
-                        <a href='/'>
-                            <h1 >HOME</h1>
-                        </a>
-                        <a href='/about'>
-                            <h1 className={styles.selected}>ABOUT ME</h1>
-                        </a>
-                        <a href='/projects'>
-                            <h1>PROJECTS</h1>
-                        </a>
-                        <a href='/blogs'>
-                            <h1>BLOGS</h1>
-                        </a>
-                        <a href='/archives'>
-                            <h1>ARCHIVES</h1>
-                        </a>
+                        <h1 style={{ fontSize: '40px' }}>biccs<span style={{ color: '#7ae582' }}>dev</span></h1>
+                        <div className={styles.items}>
+                            <a href='/'>
+                                <h1 >HOME</h1>
+                            </a>
+                            <a href='/about'>
+                                <h1 className={styles.selected}>ABOUT ME</h1>
+                            </a>
+                            <a href='/projects'>
+                                <h1>PROJECTS</h1>
+                            </a>
+                            <a href='/blogs'>
+                                <h1>BLOGS</h1>
+                            </a>
+                            <a href='/archives'>
+                                <h1>ARCHIVES</h1>
+                            </a>
+                        </div>
+
                     </div>
                 </header>
             }
-            {(projects) &&
+            {
+                (projects) &&
                 <header className={styles.headerContainer}>
                     <input className={styles.checkbox} type="checkbox" name="" id="" />
                     <div className={styles.hamburgerLines}>
@@ -87,25 +96,30 @@ export default function Layout({ children, home, about, projects, blogs, archive
                         <span className={`${styles.line} ${styles.line3}`}></span>
                     </div>
                     <div className={styles.menuItems}>
-                        <a href='/'>
-                            <h1 >HOME</h1>
-                        </a>
-                        <a href='/about'>
-                            <h1>ABOUT ME</h1>
-                        </a>
-                        <a href='/projects'>
-                            <h1 className={styles.selected}>PROJECTS</h1>
-                        </a>
-                        <a href='/blogs'>
-                            <h1>BLOGS</h1>
-                        </a>
-                        <a href='/archives'>
-                            <h1>ARCHIVES</h1>
-                        </a>
+                        <h1 style={{ fontSize: '40px' }}>biccs<span style={{ color: '#7ae582' }}>dev</span></h1>
+                        <div className={styles.items}>
+                            <a href='/'>
+                                <h1 >HOME</h1>
+                            </a>
+                            <a href='/about'>
+                                <h1>ABOUT ME</h1>
+                            </a>
+                            <a href='/projects'>
+                                <h1 className={styles.selected}>PROJECTS</h1>
+                            </a>
+                            <a href='/blogs'>
+                                <h1>BLOGS</h1>
+                            </a>
+                            <a href='/archives'>
+                                <h1>ARCHIVES</h1>
+                            </a>
+                        </div>
+
                     </div>
                 </header>
             }
-            {(blogs) &&
+            {
+                (blogs) &&
                 <header className={styles.headerContainer}>
                     <input className={styles.checkbox} type="checkbox" name="" id="" />
                     <div className={styles.hamburgerLines}>
@@ -114,25 +128,30 @@ export default function Layout({ children, home, about, projects, blogs, archive
                         <span className={`${styles.line} ${styles.line3}`}></span>
                     </div>
                     <div className={styles.menuItems}>
-                        <a href='/'>
-                            <h1 >HOME</h1>
-                        </a>
-                        <a href='/about'>
-                            <h1>ABOUT ME</h1>
-                        </a>
-                        <a href='/projects'>
-                            <h1>PROJECTS</h1>
-                        </a>
-                        <a href='/blogs'>
-                            <h1 className={styles.selected}>BLOGS</h1>
-                        </a>
-                        <a href='/archives'>
-                            <h1>ARCHIVES</h1>
-                        </a>
+                        <h1 style={{ fontSize: '40px' }}>biccs<span style={{ color: '#7ae582' }}>dev</span></h1>
+                        <div className={styles.items}>
+                            <a href='/'>
+                                <h1 >HOME</h1>
+                            </a>
+                            <a href='/about'>
+                                <h1>ABOUT ME</h1>
+                            </a>
+                            <a href='/projects'>
+                                <h1>PROJECTS</h1>
+                            </a>
+                            <a href='/blogs'>
+                                <h1 className={styles.selected}>BLOGS</h1>
+                            </a>
+                            <a href='/archives'>
+                                <h1>ARCHIVES</h1>
+                            </a>
+                        </div>
+
                     </div>
                 </header>
             }
-            {(archives) &&
+            {
+                (archives) &&
                 <header className={styles.headerContainer}>
                     <input className={styles.checkbox} type="checkbox" name="" id="" />
                     <div className={styles.hamburgerLines}>
@@ -141,25 +160,29 @@ export default function Layout({ children, home, about, projects, blogs, archive
                         <span className={`${styles.line} ${styles.line3}`}></span>
                     </div>
                     <div className={styles.menuItems}>
-                        <a href='/'>
-                            <h1 >HOME</h1>
-                        </a>
-                        <a href='/about'>
-                            <h1>ABOUT ME</h1>
-                        </a>
-                        <a href='/projects'>
-                            <h1>PROJECTS</h1>
-                        </a>
-                        <a href='/blogs'>
-                            <h1>BLOGS</h1>
-                        </a>
-                        <a href='/archives'>
-                            <h1 className={styles.selected}>ARCHIVES</h1>
-                        </a>
+                        <h1 style={{ fontSize: '40px' }}>biccs<span style={{ color: '#7ae582' }}>dev</span></h1>
+                        <div className={styles.items}>
+                            <a href='/'>
+                                <h1 >HOME</h1>
+                            </a>
+                            <a href='/about'>
+                                <h1>ABOUT ME</h1>
+                            </a>
+                            <a href='/projects'>
+                                <h1>PROJECTS</h1>
+                            </a>
+                            <a href='/blogs'>
+                                <h1>BLOGS</h1>
+                            </a>
+                            <a href='/archives'>
+                                <h1 className={styles.selected}>ARCHIVES</h1>
+                            </a>
+                        </div>
+
                     </div>
                 </header>
             }
             <main className={styles.mainContainer}>{children}</main>
-        </div>
+        </div >
     );
 }

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 import Layout from '../components/layout'
 import styles from '../styles/Home.module.css'
+import pfp from '../public/pfp.png'
 
 import dynamic from "next/dynamic";
 const Animator = dynamic(
@@ -19,15 +20,12 @@ Home.description = "hi";
 Home.faviconUrl = "public/home.ico";
 export default function Home() {
 
-  const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
-  const FadeUp = batch(Fade(), Move(), Sticky());
-
   return (
     <Layout home>
       <Head>
         <link rel='shortcut icon' href='/home.ico' />
         <title>
-          Welcome to the site | lets build software
+          Welcome to the site | lets build software together
         </title>
         <meta
           name="description"
@@ -45,61 +43,27 @@ export default function Home() {
         />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" />
       </Head>
-      <ScrollContainer>
-        <ScrollPage>
-          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-            <h1 className={styles.textContainer}>Hi 👋🏽, I'm Victor Torres, a <span className={styles.maskContainer}>SOFTWARE ENGINEER</span> based in Mexico.</h1>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-            <h1 className={styles.textContainer}>If you need a <span className={styles.maskContainer}>DEV</span> who can...</h1>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={ZoomInScrollOut}>
-            <h2 className={styles.textContainer}>Design <span className={styles.maskContainer}>solutions</span> for your <span className={styles.maskContainer}>problems</span>...</h2>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={FadeUp}>
-            <h2 className={styles.textContainer}>Communicate<span className={styles.maskContainer}> effectively</span> and <span className={styles.maskContainer}>take action</span>...</h2>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} >
-
-            <h2 className={styles.textContainer}>
-              <Animator animation={MoveIn(-1000, 0)}><span className={styles.maskContainer}>Build</span>:</Animator>
-              <Animator animation={MoveIn(1000, 0)}>- Apis</Animator>
-              <Animator animation={MoveOut(-1000, 0)}>- Websites</Animator>
-              <Animator animation={MoveIn(1000, 0)}>- Systems</Animator>
-              <Animator animation={MoveIn(1000, 0)}>-  Frontend & Backend</Animator>
-            </h2>
+      <div className={styles.main}>
+        <div className={styles.title}>
+          <div className={styles.titleImage}>
+            <Image className={styles.myImg} src={pfp} alt="cat with ghost fur" width={250} height={250}></Image>
           </div>
-        </ScrollPage>
-        <ScrollPage>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} >
-            <h2 className={styles.textContainer}>
-              <Animator animation={MoveOut(-1000, 0)}>- Following <span className={styles.maskContainer}>best practices</span></Animator>
-              <Animator animation={MoveOut(-1000, 0)}>and <span className={styles.maskContainer}>well documented</span>...</Animator>
-            </h2>
+          <h1>Hi, I'm Victor Torres, a Software Engineer based in Mexico.</h1>
+        </div>
+        <div className={styles.description}>
+          <h2>
+            If you need to bring new ideas to life...
+            Design a solution for your problem...
+            Build APIs, websites or systems that follow best practices and are well documented...
+          </h2>
+        </div>
+        <div className={styles.contact}>
+          <h1>Lets get in touch!</h1>
+          <div className={styles.buttonsContainer}>
+            <button className={styles.button54} role='button'><Link href='/contact'>Contact</Link></button>
           </div>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={batch(Fade(), Sticky())}>
-            <h1 className={styles.textContainer}><span className={styles.maskContainer}>Well</span>...</h1>
-            <br />
-            <h1 className={styles.textContainer}>
-              let's get in touch!
-            </h1>
-            <div className={styles.buttonsContainer}>
-              <button className={styles.button52} role='button'><Link href="/about">About Me</Link></button>
-              <button className={styles.button52} role='button'><Link href='/contact'>Contact</Link></button>
-            </div>
-          </Animator>
-        </ScrollPage>
-      </ScrollContainer>
+        </div>
+      </div>
     </Layout>
   )
 }
