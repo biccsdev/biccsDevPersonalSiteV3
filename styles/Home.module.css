@@ -56,7 +56,7 @@
   text-decoration: none;
   text-transform: uppercase;
   background-color: var(--text);
-  color: var(--backDark);
+  color: var(--highlight);
   cursor: pointer;
   border: 3px solid;
   padding: 0.25em 0.5em;
@@ -68,7 +68,7 @@
   touch-action: manipulation;
 }
 
-.button54:active {
+.button54:hover {
   box-shadow: 0px 0px 0px 0px;
   top: 5px;
   left: 5px;
@@ -100,6 +100,7 @@
   .description {
     width: 80%;
     padding-top: 40px;
+    text-align: justify;
   }
   .contact {
     padding-top: 30px;
@@ -120,7 +121,7 @@
 
   .titleImage {
     display: flex;
-    width: 30%;
+    width: 20%;
     justify-content: flex-end;
     padding-right: 25px;
   }
@@ -136,9 +137,12 @@
   }
   .description {
     width: 100%;
-    padding-top: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
+    text-align: center;
+    text-align: justify;
+  }
+  .description h2 {
+    width: 40%;
+    margin: 0 auto;
   }
   .contact {
     padding-top: 30px;

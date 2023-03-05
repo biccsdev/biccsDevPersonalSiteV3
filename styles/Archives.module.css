@@ -1,0 +1,18 @@
+.main {
+  --backDark: #0f1012;
+  --backLight: #fffaff;
+  --highlight: #7ae582;
+  --text: #5d2e8c;
+  font-family: "Roboto";
+  color: var(--backDark);
+}
+
+.main h2 {
+  margin-top: 50px;
+  padding: 50px;
+  text-align: justify;
+}
+
+.main h3 {
+  margin-left: 50px;
+}

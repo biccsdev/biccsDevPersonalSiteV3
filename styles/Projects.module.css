@@ -1,5 +1,5 @@
 .mainContainer {
-  --back: #222823;
+  --back: #0f1012;
   --text: #fffaff;
   --highlight: #7ae582;
   --secondHighlight: #5d2e8c;
@@ -7,102 +7,68 @@
   color: var(--back);
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .cardsContainer {
+  margin-top: 50px;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
-  width: 90%;
+  justify-content: center;
 }
 
 .card {
   display: flex;
-  background-color: var(--back);
-  border-radius: 20px;
-  color: var(--highlight);
+  color: var(--back);
   text-align: center;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .card p {
   text-align: justify;
 }
 
-.card a {
-  margin: 20px;
-}
-
-.cardButton {
-  appearance: button;
-  background-color: var(--secondHighlight);
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: din-round, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
-  overflow: visible;
-  padding: 13px 16px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  transform: translateZ(0);
-  transition: filter 0.2s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.cardButton:after {
-  background-clip: padding-box;
-  background-color: var(--secondHighlight);
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  bottom: -4px;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
-
-.cardButton:focus {
-  user-select: auto;
-}
-
-.cardButton:hover:not(:disabled) {
-  filter: brightness(1.1);
-  -webkit-filter: brightness(1.1);
-}
-
-.cardButton:disabled {
-  cursor: auto;
+.cardInfo {
+  margin-left: 40px;
 }
 
 .card h2 {
   width: 100%;
 }
 
-@media (max-width: 2560px) {
+.cardButton {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--secondHighlight);
+  color: var(--highlight);
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.cardButton:hover {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (max-width: 769px) {
   .card {
-    width: 45%;
-    margin: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cardInfo {
+    margin-left: 0px;
   }
 }

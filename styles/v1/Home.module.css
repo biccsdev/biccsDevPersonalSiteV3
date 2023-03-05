@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
+
+.main {
+  font-family: "VT323", monospace;
+  background-image: url(../../public/v1/city.gif);
+  background-size: cover;
+  height: auto;
+}
+
+.mainContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+}
+
+#socialMedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 50px;
+  max-width: 100px;
+}
+
+#socialMedia a {
+  margin-bottom: 20px;
+  align-self: flex-end;
+}
+
+/* Centers all components related to the console and its surroundings */
+
+.console {
+  height: 500px;
+  width: 70%;
+  min-width: 300px;
+  max-width: 900px;
+  justify-content: center;
+  border-style: solid;
+  border-color: white;
+  background: rgba(0, 0, 0, 0.534);
+  margin: 0 auto;
+  font-size: 1.15em;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  overflow-x: hidden;
+}
+
+.console #console-component-window {
+  text-align: center;
+  margin-top: 10px;
+  color: #fffaff;
+  font-family: "VT323", monospace;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.console .consoleDisplayFlex {
+  display: flex;
+  padding: 0px 20px 0px 20px;
+  font-family: "VT323", monospace;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.console .consoleDisplayFlex p {
+  width: auto;
+  font-size: 2.8rem;
+  line-height: 2.6rem;
+}
+
+.console .consoleDisplayFlex h2 {
+  width: 100%;
+  font-size: 2.8rem;
+  line-height: 2.6rem;
+}
+
+.console .consoleDisplayFlex h3 {
+  width: 100%;
+  font-size: 2.8rem;
+  line-height: 2.6rem;
+}
+
+.console .consoleDisplayFlex .console-component-text {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.console .consoleComponentBar {
+  display: flex;
+  border-bottom-style: solid;
+  border-color: white;
+}
+
+.console .consoleComponentBar #console-component-window {
+  background: #222823a6;
+  height: auto;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: white;
+  min-width: 150px;
+  border-radius: 20px 20px 0 0;
+}
+
+.consoleButtonContainer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-bottom: 7px;
+}
+
+.console .consoleComponentBar #console-component-button-1 {
+  height: 20px;
+  width: 20px;
+  margin-left: 60px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 166, 0, 0.445);
+}
+
+.console .consoleComponentBar #console-component-button-2 {
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 128, 0, 0.445);
+}
+
+.console .consoleComponentBar #console-component-button-3 {
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.445);
+}
+
+.console .consoleComponentLeftText {
+  color: #7ae582;
+}
+
+.console .consoleComponentRightText {
+  color: #5d2e8c;
+}
+
+.console .consoleComponentText {
+  color: #fffaff;
+}
+
+.footerContainer {
+  width: 100%;
+  margin: auto;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+#nft-reference {
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: #3c1073;
+  font-family: "VT323", monospace;
+  font-size: 1.6em;
+}
+
+#nft-reference a {
+  padding-left: 1em;
+  padding-right: 0.4em;
+  text-decoration: none;
+  color: #fffaff;
+}
+
+.headerContainer {
+  padding-top: 10em;
+  width: 100%;
+  margin: auto;
+  min-width: 320px;
+}
+
+/* Add a purple background color to the top navigation */
+
+.navbar {
+  margin: 0 auto;
+  width: fit-content;
+  background-color: #3c1073;
+  text-align: center;
+  margin-bottom: 2em;
+  display: flex;
+  border-radius: 10px;
+  font-family: "VT323", monospace;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+/* Style the links inside the navigation bar */
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.6em;
+}
+
+/* Change the color of links on hover */
+
+.navbar a:hover {
+  background-color: #562586;
+  color: #f2f2f2;
+  border-radius: 5px;
+}
