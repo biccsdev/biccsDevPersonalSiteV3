@@ -2,10 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
 
 .main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: "VT323", monospace;
   background-image: url(../../public/v1/city.gif);
   background-size: cover;
-  height: auto;
+  height: 100vh;
 }
 
 .mainContainer {
@@ -48,7 +51,6 @@
 .console .consoleComponentWindow {
   text-align: center;
   margin-top: 10px;
-  margin-left: 10px;
   color: #fffaff;
   font-family: "VT323", monospace;
   font-weight: bold;
@@ -59,6 +61,7 @@
   display: flex;
   padding: 0px 20px 0px 20px;
   font-family: "VT323", monospace;
+  flex-wrap: wrap;
   margin-top: 10px;
 }
 
@@ -70,17 +73,17 @@
 
 .console .consoleDisplayFlex h2 {
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   line-height: 2.6rem;
 }
 
 .console .consoleDisplayFlex h3 {
   width: 100%;
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+  font-size: 2.8rem;
+  line-height: 2.6rem;
 }
 
-.console .consoleDisplayFlex .console-component-text {
+.console .consoleDisplayFlex .consoleComponentText {
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -89,7 +92,6 @@
   display: flex;
   border-bottom-style: solid;
   border-color: white;
-  overflow-x: hidden;
 }
 
 .console .consoleComponentBar .consoleComponentWindow {
@@ -149,7 +151,7 @@
   color: #fffaff;
 }
 
-.footerContainer {
+.footer {
   width: 100%;
   margin: auto;
   margin-top: 2em;
@@ -173,11 +175,7 @@
   color: #fffaff;
 }
 
-.lastButton {
-  margin: 0 auto;
-}
-
-.headerContainer {
+.header {
   padding-top: 10px;
   width: 100%;
   margin: auto;
@@ -186,7 +184,7 @@
 
 /* Add a purple background color to the top navigation */
 
-.navbar {
+.navBar {
   margin: 0 auto;
   width: fit-content;
   background-color: #3c1073;
@@ -200,7 +198,7 @@
 
 /* Style the links inside the navigation bar */
 
-.navbar a {
+.navBar a {
   float: left;
   color: #f2f2f2;
   padding: 14px 16px;
@@ -210,8 +208,77 @@
 
 /* Change the color of links on hover */
 
-.navbar a:hover {
+.navBar a:hover {
   background-color: #562586;
   color: #f2f2f2;
   border-radius: 5px;
+}
+
+.mainProjectCard {
+  height: auto;
+  display: flex;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px 40px;
+}
+
+.mainProjectCard img {
+  border-radius: 5px;
+  padding-top: 5px;
+}
+
+.mainProjectCard .projectCardImageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mainProjectCard .projectCardTextContainer {
+  font-size: 2.8rem;
+  line-height: 2.6rem;
+  color: white;
+  font-size: calc(12px + 1.5vw);
+  margin: 8px;
+  text-align: center;
+}
+
+.projectCardTextContainer p {
+  padding: 6px;
+}
+
+.projectCardButtonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectCardButtonsContainer a {
+  text-decoration: none;
+  text-align: center;
+  min-width: 70px;
+  max-width: 360px;
+  height: 30px;
+  font-family: "VT323", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  background-color: #3c1073;
+  color: white;
+  border-radius: 5px;
+  color: #e0dfdc;
+  letter-spacing: 0.1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a,
+    0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222,
+    0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a,
+    0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212,
+    0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+.lastButton {
+  margin: 0 auto;
 }
