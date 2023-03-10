@@ -1,0 +1,705 @@
+.main {
+  /* Colors */
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d4;
+  --secondary-blue: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --warm-black: #201e1c;
+  --black: #282623;
+  --grey: #bababa;
+  --off-white: #faf8f7;
+  --just-white: #ffffff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 320px;
+  height: 334px;
+  text-align: center;
+  background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+}
+
+.header .img {
+  width: 150px;
+  height: 24px;
+  margin-top: 60px;
+  align-self: center;
+}
+
+.headerTitleContainer {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  height: 218px;
+  margin-top: 40px;
+  text-align: center;
+  align-self: center;
+}
+
+.headerTitleContainer h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+
+.headerTitleContainer p {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--soft-orange);
+}
+
+.headerTitleContainer .headerButton {
+  position: absolute;
+  left: calc(50% - 118px);
+  top: 270px;
+  display: block;
+  margin-top: 35px;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background-color: var(--off-white);
+  /* Shadow */
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.headerButton span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url("../../public/v1/batatabit/down-arrow.svg");
+}
+
+.mainContainer {
+  width: 100%;
+  height: auto;
+  background-color: var(--off-white);
+}
+
+.mainExchangeContainer {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.mainExchangeContainerTitle {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mainExchangeContainer .backgroundImg {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-image: url("../../public/v1/batatabit/img/Bitcoin.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mainExchangeContainer h2 {
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--black);
+}
+
+.mainExchangeContainer p {
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  color: #757575;
+}
+
+.mainTablesContainer {
+  /* display: flex;
+    margin: 0 auto;
+    width: 100%;
+    height: 320px; */
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+  /* --- */
+  display: flex;
+  height: 360px;
+}
+
+.mainCurrencyTable,
+.mainComissionTable,
+.mainTableDecoratorContainer {
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: 360px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+.mainTableDecoratorContainer {
+  width: 50%;
+  min-width: 150px;
+  max-width: 500px;
+  height: 200px;
+  margin: 0 auto;
+  font-family: "DM Sans", sans-serif;
+  background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+  border-radius: 15px;
+}
+
+.mainTableDecoratorContainer h3 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 3.2rem;
+  color: var(--off-white);
+  margin: 0 auto;
+  margin-top: 32%;
+}
+
+.mainCurrencyTable .currencyTableTitle {
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: var(--bitcoin-orange);
+  padding-left: 18px;
+  text-align: center;
+}
+
+.mainComissionTable .comissionTableTitle {
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: var(--secondary-blue);
+  padding-left: 18px;
+  text-align: center;
+}
+
+.currencyTableContainer,
+.comissionTableContainer {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.currencyTableContainer table,
+.comissionTableContainer table {
+  width: 100%;
+  height: 100%;
+}
+
+.currencyTableContainer td,
+.comissionTableContainer td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: var(--grey);
+  background-color: var(--just-white);
+}
+
+.currencyTableContainer .tableTopLeft,
+.comissionTableContainer .tableTopLeft {
+  border-radius: 15px 0 0 0;
+}
+
+.currencyTableContainer .tableTopRight,
+.comissionTableContainer .tableTopRight {
+  border-radius: 0 15px 0 0;
+}
+
+.currencyTableContainer .tableBottomLeft,
+.comissionTableContainer .tableBottomLeft {
+  border-radius: 0 0 0 15px;
+}
+
+.currencyTableContainer .tableBottomRight,
+.comissionTableContainer .tableBottomRight {
+  border-radius: 0 0 15px 0;
+}
+
+.currencyTableContainer .tableRight,
+.comissionTableContainer .tableRight {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  color: #757575;
+}
+
+.currencyTableContainer .down,
+.comissionTableContainer .down {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-image: url("../../public/v1/batatabit/trending-down.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.currencyTableContainer .up,
+.comissionTableContainer .up {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-image: url("../../public/v1/batatabit/trending-up.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.currencyTableUpdate {
+  width: 190px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  background-color: var(--soft-orange);
+  border-radius: 8px;
+}
+
+.currencyTableUpdate p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: var(--warm-black);
+}
+
+.comissionTableUpdate {
+  width: 190px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  background-color: var(--soft-blue);
+  border-radius: 8px;
+}
+
+.comissionTableUpdate p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: var(--warm-black);
+}
+
+.mainProductDetail {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: var(--warm-black);
+}
+
+.productDetailBatataLogo {
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: -10px;
+  left: calc(50% - 20px);
+  background-image: url("../../public/v1/batatabit/batata.svg");
+}
+
+.productDetailTitle {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.productDetailTitle h2 {
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+
+.productDetailTitle p {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+
+.productCardsContent {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: fit-content;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: var(--black);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.productCardsContent .clock {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-image: url("../../public/v1/batatabit/clock.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.productCardsContent .eye {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-image: url("../../public/v1/batatabit/eye.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.productCardsContent .dollar {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-image: url("../../public/v1/batatabit/dollar-sign.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.productCardsContent .rightArrow {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-image: url("../../public/v1/batatabit/check-circle.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.productCardTitle {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--just-white);
+}
+
+.productCardBody {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+
+.bitcoinImgContainer {
+  width: 100%;
+  min-width: 320px;
+  height: 50vh;
+  background-image: url("../../public/v1/batatabit/img/bitcoinbaby2x.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.bitcoinImgContainer {
+  padding-top: 60px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+
+.mainPlansContainer {
+  width: 100%;
+  min-width: 320px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.plansTitle {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.plansTitle h2 {
+  padding-top: 50px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--black);
+}
+
+.plansTitle p {
+  padding-top: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #757575;
+}
+
+.plansContainerSlider {
+  /* new */
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+  /* --- */
+  display: flex;
+  height: 316px;
+  /* overflow-x: scroll; 
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity; */
+}
+
+.carouselTableItem {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: carousel-table-animate-vertical 15s linear infinite;
+}
+
+.carouselTableItem:nth-child(1) {
+  animation-delay: calc(5s * -1);
+}
+
+.carouselTableItem:last-child {
+  animation-delay: calc(-5s * 2);
+}
+
+@keyframes carousel-table-animate-vertical {
+  0% {
+    transform: translateX(70%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+  3%,
+  33.3333333333% {
+    transform: translateX(70%) scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  36.3333333333%,
+  66.6666666667% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  69.6666666667%,
+  100% {
+    transform: translateX(-70%) scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  103% {
+    transform: translateX(-70%) scale(0.5);
+    opacity: 0;
+    visibility: visible;
+  }
+}
+
+.carouselItem {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: carousel-animate-vertical 15s linear infinite;
+}
+
+.carouselItem:nth-child(1) {
+  animation-delay: calc(5s * -1);
+}
+
+.carouselItem:nth-child(2) {
+  animation-delay: calc(5s * 0);
+}
+
+.carouselItem:last-child {
+  animation-delay: calc(-5s * 2);
+}
+
+@keyframes carousel-animate-vertical {
+  0% {
+    transform: translateX(70%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+  3%,
+  33.3333333333% {
+    transform: translateX(70%) scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  36.3333333333%,
+  66.6666666667% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  69.6666666667%,
+  100% {
+    transform: translateX(-70%) scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  103% {
+    transform: translateX(-70%) scale(0.5);
+    opacity: 0;
+    visibility: visible;
+  }
+}
+
+.plansContainerCard {
+  position: relative;
+  scroll-snap-align: center;
+  width: 70%;
+  min-width: 190px;
+  max-width: 300px;
+  height: 250px;
+  margin: 50px 5px 0;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  background-color: var(--just-white);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.plansContainerCard .recommended {
+  position: absolute;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  left: calc(50% - 60px);
+  font-weight: bold;
+  font-size: 0.8rem;
+  background-color: var(--bitcoin-orange);
+  border-radius: 8px;
+  color: var(--just-white);
+}
+
+.planCardTitle {
+  padding-top: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--black);
+}
+
+.planCardPrice {
+  padding: 5px 0;
+  font-size: 5.2rem;
+  font-weight: bold;
+  line-height: 5rem;
+  color: var(--black);
+}
+
+.planCardPrice span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  vertical-align: 35px;
+  padding-right: 5px;
+}
+
+.planCardSaving {
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #757575;
+}
+
+.planCardCa {
+  width: 150px;
+  height: 48px;
+  margin-top: 20px;
+  background-color: #faf8f7;
+  border: 2px solid var(--bitcoin-orange);
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--black);
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 10px;
+}
+
+.planCardCa span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../public/v1/batatabit/down-arrow.svg");
+  vertical-align: text-bottom;
+  margin-left: 5px;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: var(--bitcoin-orange);
+}
+
+.footer section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.footer .left ul {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  list-style: none;
+}
+
+.left li {
+  margin: 10px 0;
+}
+
+.left a {
+  text-decoration: none;
+  color: var(--just-white);
+}
+
+.sliderContainer {
+  width: 100%;
+  position: relative;
+}

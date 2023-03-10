@@ -60,7 +60,7 @@ export default function About() {
                 <div className={styles.aboutMeContainer}>
                     <h1>Hello World!</h1>
                     <Image className={styles.pfp} src={pfp} width={100} height={100} alt='biccsdev pfp of a BVDCAT ( an nft on the solana blockchain )' />
-                    <div>
+                    <div className={styles.mainContainerText}>
                         <p>I'm Victor Torres also known as @biccsdev, a software engineer/web developer, blockchain and augmented reality enthusiast. My passion for technology and coding began in my early years of life and eventually found myself working as a web developer, generating solutions for local businesses. Soon after, I discovered the potential of virtual and augmented reality and the power of blockchain technology.
 
                             After that<span id="dots">...</span><span id="more" className={styles.more}> I quickly became a passionate advocate of these technologies, and began to develop applications and projects that made use of these technologies. I've since worked on a number of APIs, web2 websites and developed several web applications for web3 projects. I'm looking forward learning more and eventually developing my first virtual reality application.

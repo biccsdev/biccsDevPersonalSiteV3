@@ -32,7 +32,7 @@ export default function Project() {
                         <Image src={'/projects/videoSMB.gif'} alt='token gated app gif example' width={300} height={300} />
                         <div className={styles.cardInfo}>
                             <h2>Token gated system (SMB frames)</h2>
-                            <p> SMB Frames is an app I made as a proof of concept about token gated content for a Solana NFT collection, made with NextJS for the front-end and Metaplex, Anchor and @solana/web3.js for the token gated system implementation.
+                            <p> SMB Frames is an app I made as a proof of concept about token gated content as a use case for web3, made with NextJS for the front-end and Metaplex, Anchor and @solana/web3.js for the token gated system implementation.
                                 This is done to incentivize users to take part in a platform, or to provide exclusive access to certain content or services.
                                 Token gating can be used to create loyalty programs, reward content creators, or to drive user engagement.</p>
                             <a href='https://smbframes.vercel.app/' target='_blank'>
@@ -47,9 +47,9 @@ export default function Project() {
                         <Image src={'/projects/villinzBot.jpg'} alt='token gated app gif example' width={300} height={300} />
                         <div className={styles.cardInfo}>
                             <h2>Twitter Automated Mint Bot</h2>
-                            <p> This twitter bot was made as a contribution to a now known nft project among the solana nft community, in order to increase the noise about the collection and make more people aware of this community.
+                            <p> This twitter bot was made as a contribution to a web3 community, in order to increase the noise about the collection and make more people aware of this community.
                                 It was made using twitter API V2 for interacting with twitter, ExpressJS for the backend and @solana/web3.js library for interacting with the Solana Blockchain.
-                                Twitter bots can be a great way to keep your followers up to date on the latest mints of your NFT collection.
+                                Twitter bots can be a great way to keep your followers up to date on the latest mints of your Digital Collectibles collection.
                                 By using a Twitter bot, you can quickly and easily share the new mints with your followers,
                                 helping to create excitement and interest in your collection. This can help to increase engagement and sales,
                                 as well as give your collection more visibility and recognition. In addition, it can also be a great way to

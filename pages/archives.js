@@ -4,6 +4,10 @@ import Layout from '../components/layout'
 import styles from '../styles/Archives.module.css'
 import { Chrono } from 'react-chrono'
 
+import v3 from '../public/v3.jpg';
+import v2 from '../public/v2.jpg';
+import v1 from '../public/v1.jpg';
+
 export default function Archive() {
     return (
         <Layout archives>
@@ -44,12 +48,11 @@ export default function Archive() {
                             media: {
                                 name: "dunkirk beach",
                                 source: {
-                                    url:
-                                        "https://i2-prod.mirror.co.uk/incoming/article10847802.ece/ALTERNATES/s810/PAY-Dunkirk-in-colour.jpg"
+                                    url: "https://i.ibb.co/fF33sp9/v1.jpg"
                                 },
                                 type: "IMAGE"
                             },
-                            url: "/v1",
+                            url: "https://victort555.github.io/biccsDevPersonalSite/",
                             cardSubtitle:
                                 "First commit made on December 2nd 2021",
                             cardDetailedText: `This portfolio was made with the intention of showcasing my first projects and developing a site of my own, built with plain Html, Css and Vanilla Javascript, hosted in a raspberry pi with apache2 web server.`
@@ -60,12 +63,11 @@ export default function Archive() {
                             media: {
                                 name: "dunkirk beach",
                                 source: {
-                                    url:
-                                        "https://i2-prod.mirror.co.uk/incoming/article10847802.ece/ALTERNATES/s810/PAY-Dunkirk-in-colour.jpg"
+                                    url: "https://i.ibb.co/vJbdd1t/v2.jpg"
                                 },
                                 type: "IMAGE"
                             },
-                            url: "/v2",
+                            url: "https://biccsdev.github.io/biccsdevPersonalSiteV2/",
                             cardSubtitle:
                                 "First commit made on March 10th 2022",
                             cardDetailedText: `The second version of my personal site was a Single Page Application, made with the intention of experimenting with new web concepts, building this site I used ReactJS and tailwind, started a new section where I put a blog and developed a couple of new projects experimenting with new concepts.`
@@ -76,8 +78,7 @@ export default function Archive() {
                             media: {
                                 name: "dunkirk beach",
                                 source: {
-                                    url:
-                                        "https://i2-prod.mirror.co.uk/incoming/article10847802.ece/ALTERNATES/s810/PAY-Dunkirk-in-colour.jpg"
+                                    url: "https://i.ibb.co/MgWP75x/v3.jpg"
                                 },
                                 type: "IMAGE"
                             },
