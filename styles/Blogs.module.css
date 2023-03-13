@@ -50,3 +50,17 @@
   top: 5px;
   left: 5px;
 }
+
+@media (max-width: 430px) {
+  .blogCard {
+    display: block;
+  }
+
+  .blogCard img {
+    margin-left: 25%;
+  }
+
+  .readButton {
+    margin-left: 25%;
+  }
+}

@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 // import BlogComponent from '../components/blog'
 
 import v1 from '../public/v1.jpg';
+import article from '../public/article1.png';
 
 export default function Blog({ blog }) {
     // const latestPost = "";
@@ -43,7 +44,7 @@ export default function Blog({ blog }) {
             <div className={styles.mainContainer}>
                 {blog.map(item => (
                     <div key={item._id} className={styles.blogCard}>
-                        <Image src={v1} alt="Background image" width={100} height={100} />
+                        <Image src={article} alt="Background image" width={150} height={100} />
                         <div className={styles.cardText}>
                             <h1>{item.title}</h1>
                             <h3>{item.content.slice(0, 150)}...</h3>
@@ -59,7 +60,6 @@ export default function Blog({ blog }) {
 export async function getStaticProps() {
     const res = await fetch('http://localhost:3000/blog');
     const blog = await res.json();
-    console.log(blog);
     return {
         props: {
             blog,

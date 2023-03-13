@@ -35,21 +35,21 @@ export default function Layout({ children, home, about, projects, blogs, archive
                     <div className={styles.menuItems}>
                         <h1 style={{ fontSize: '40px' }}>biccs<span style={{ color: '#7ae582' }}>dev</span></h1>
                         <div className={styles.items}>
-                            <a href='/'>
+                            <Link href='/'>
                                 <h1 className={styles.selected}>HOME</h1>
-                            </a>
-                            <a href='/about'>
+                            </Link>
+                            <Link href='/about'>
                                 <h1>ABOUT ME</h1>
-                            </a>
-                            <a href='/projects'>
+                            </Link>
+                            <Link href='/projects'>
                                 <h1>PROJECTS</h1>
-                            </a>
-                            <a href='/blogs'>
+                            </Link>
+                            <Link href='/blogs'>
                                 <h1>BLOGS</h1>
-                            </a>
-                            <a href='/archives'>
+                            </Link>
+                            <Link href='/archives'>
                                 <h1>ARCHIVES</h1>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </header>
@@ -66,23 +66,22 @@ export default function Layout({ children, home, about, projects, blogs, archive
                     <div className={styles.menuItems}>
                         <h1 style={{ fontSize: '40px' }}>biccs<span style={{ color: '#7ae582' }}>dev</span></h1>
                         <div className={styles.items}>
-                            <a href='/'>
+                            <Link href='/'>
                                 <h1 >HOME</h1>
-                            </a>
-                            <a href='/about'>
+                            </Link>
+                            <Link href='/about'>
                                 <h1 className={styles.selected}>ABOUT ME</h1>
-                            </a>
-                            <a href='/projects'>
+                            </Link>
+                            <Link href='/projects'>
                                 <h1>PROJECTS</h1>
-                            </a>
-                            <a href='/blogs'>
+                            </Link>
+                            <Link href='/blogs'>
                                 <h1>BLOGS</h1>
-                            </a>
-                            <a href='/archives'>
+                            </Link>
+                            <Link href='/archives'>
                                 <h1>ARCHIVES</h1>
-                            </a>
+                            </Link>
                         </div>
-
                     </div>
                 </header>
             }
@@ -98,21 +97,21 @@ export default function Layout({ children, home, about, projects, blogs, archive
                     <div className={styles.menuItems}>
                         <h1 style={{ fontSize: '40px' }}>biccs<span style={{ color: '#7ae582' }}>dev</span></h1>
                         <div className={styles.items}>
-                            <a href='/'>
+                            <Link href='/'>
                                 <h1 >HOME</h1>
-                            </a>
-                            <a href='/about'>
+                            </Link>
+                            <Link href='/about'>
                                 <h1>ABOUT ME</h1>
-                            </a>
-                            <a href='/projects'>
+                            </Link>
+                            <Link href='/projects'>
                                 <h1 className={styles.selected}>PROJECTS</h1>
-                            </a>
-                            <a href='/blogs'>
+                            </Link>
+                            <Link href='/blogs'>
                                 <h1>BLOGS</h1>
-                            </a>
-                            <a href='/archives'>
+                            </Link>
+                            <Link href='/archives'>
                                 <h1>ARCHIVES</h1>
-                            </a>
+                            </Link>
                         </div>
 
                     </div>
@@ -130,21 +129,21 @@ export default function Layout({ children, home, about, projects, blogs, archive
                     <div className={styles.menuItems}>
                         <h1 style={{ fontSize: '40px' }}>biccs<span style={{ color: '#7ae582' }}>dev</span></h1>
                         <div className={styles.items}>
-                            <a href='/'>
+                            <Link href='/'>
                                 <h1 >HOME</h1>
-                            </a>
-                            <a href='/about'>
+                            </Link>
+                            <Link href='/about'>
                                 <h1>ABOUT ME</h1>
-                            </a>
-                            <a href='/projects'>
+                            </Link>
+                            <Link href='/projects'>
                                 <h1>PROJECTS</h1>
-                            </a>
-                            <a href='/blogs'>
+                            </Link>
+                            <Link href='/blogs'>
                                 <h1 className={styles.selected}>BLOGS</h1>
-                            </a>
-                            <a href='/archives'>
+                            </Link>
+                            <Link href='/archives'>
                                 <h1>ARCHIVES</h1>
-                            </a>
+                            </Link>
                         </div>
 
                     </div>
@@ -162,23 +161,22 @@ export default function Layout({ children, home, about, projects, blogs, archive
                     <div className={styles.menuItems}>
                         <h1 style={{ fontSize: '40px' }}>biccs<span style={{ color: '#7ae582' }}>dev</span></h1>
                         <div className={styles.items}>
-                            <a href='/'>
+                            <Link href='/'>
                                 <h1 >HOME</h1>
-                            </a>
-                            <a href='/about'>
+                            </Link>
+                            <Link href='/about'>
                                 <h1>ABOUT ME</h1>
-                            </a>
-                            <a href='/projects'>
+                            </Link>
+                            <Link href='/projects'>
                                 <h1>PROJECTS</h1>
-                            </a>
-                            <a href='/blogs'>
+                            </Link>
+                            <Link href='/blogs'>
                                 <h1>BLOGS</h1>
-                            </a>
-                            <a href='/archives'>
+                            </Link>
+                            <Link href='/archives'>
                                 <h1 className={styles.selected}>ARCHIVES</h1>
-                            </a>
+                            </Link>
                         </div>
-
                     </div>
                 </header>
             }
