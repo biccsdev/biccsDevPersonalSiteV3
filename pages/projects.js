@@ -35,10 +35,10 @@ export default function Project() {
                             <p> SMB Frames is an app I made as a proof of concept about token gated content as a use case for web3, made with NextJS for the front-end and Metaplex, Anchor and @solana/web3.js for the token gated system implementation.
                                 This is done to incentivize users to take part in a platform, or to provide exclusive access to certain content or services.
                                 Token gating can be used to create loyalty programs, reward content creators, or to drive user engagement.</p>
-                            <a href='https://smbframes.vercel.app/' target='_blank'>
+                            <a href='https://smbframes.vercel.app/' target='_blank' rel="noreferrer">
                                 <button className={styles.cardButton}>Go to site</button>
                             </a>
-                            <a href='https://github.com/biccsdev/vercelSMBFrames/tree/main' target='_blank'>
+                            <a href='https://github.com/biccsdev/vercelSMBFrames/tree/main' target='_blank' rel="noreferrer">
                                 <button className={styles.cardButton}>See code</button>
                             </a>
                         </div>
@@ -55,10 +55,10 @@ export default function Project() {
                                 as well as give your collection more visibility and recognition. In addition, it can also be a great way to
                                 let your followers know when something new and exciting is coming out, giving them a reason to come back
                                 and check out your collection.</p>
-                            <a href='https://twitter.com/villinzbot' target='_blank'>
+                            <a href='https://twitter.com/villinzbot' target='_blank' rel="noreferrer">
                                 <button className={styles.cardButton}>Go to site</button>
                             </a>
-                            <a href='https://github.com/biccsdev/villinzBotV2' target='_blank'>
+                            <a href='https://github.com/biccsdev/villinzBotV2' target='_blank' rel="noreferrer">
                                 <button className={styles.cardButton}>See code</button>
                             </a>
                         </div>
@@ -73,10 +73,7 @@ export default function Project() {
                                 where the Module was needed to allow the Mongoose and UrlShortener modules functionality to be used within the main module.
                                 The controller layer was used to intercept the API calls and call the Service layer in order to execute the business logic of the system (shorten the url).
                             </p>
-                            {/* <a href='https://twitter.com/villinzbot' target='_blank'>
-                            <button className={styles.cardButton}>Go to site</button>
-                        </a> */}
-                            <a href='https://github.com/biccsdev/urlshortener' target='_blank'>
+                            <a href='https://github.com/biccsdev/urlshortener' target='_blank' rel="noreferrer">
                                 <button className={styles.cardButton}>See code</button>
                             </a>
                         </div>
@@ -89,10 +86,7 @@ export default function Project() {
                             <p>This chat app was made with NodeJs implementing ExpressJS and Mongoose for the backend, and Html, css and JS vanilla for the Frontend.
                                 This app makes use of websocket for bi-directional, full-duplex communication between the client and server. Websockets allow for real-time
                                 communication between the two endpoints, allowing for faster and more efficient communication.  </p>
-                            {/* <a href='https://twitter.com/villinzbot' target='_blank'>
-                            <button className={styles.cardButton}>Go to site</button>
-                        </a> */}
-                            <a href='https://github.com/biccsdev/chatApp' target='_blank'>
+                            <a href='https://github.com/biccsdev/chatApp' target='_blank' rel="noreferrer">
                                 <button className={styles.cardButton}>See code</button>
                             </a>
                         </div>

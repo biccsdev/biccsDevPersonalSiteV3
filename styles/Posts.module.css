@@ -1,0 +1,21 @@
+.mainContainer {
+  --back: #0f1012;
+  --text: #fffaff;
+  --highlight: #7ae582;
+  --secondHighlight: #5d2e8c;
+  font-family: "Roboto";
+  color: var(--back);
+
+  width: 100%;
+}
+
+.titleContainer {
+  text-align: center;
+}
+
+.mainContainer p {
+  width: 70%;
+  text-align: justify;
+  margin: 0 auto;
+  line-height: 2rem;
+}

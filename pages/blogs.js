@@ -3,25 +3,15 @@ import Image from 'next/image'
 import Layout from '../components/layout'
 import styles from '../styles/Blogs.module.css'
 import React, { useState, useEffect } from 'react';
-// import BlogComponent from '../components/blog'
+import Link from 'next/link';
 
-import v1 from '../public/v1.jpg';
 import article from '../public/article1.png';
 
 export default function Blog({ blog }) {
-    // const latestPost = "";
-    // const latestPostDescription = '';
-    // const latestPostImageUrl = '';
-    // const [data, setData] = useState([]);
+    if (!blog) {
+        return <h1>Loading...</h1>
+    }
 
-    // useEffect(() => {
-    //     async function fetchData() {
-    //         const res = await fetch('https://localhost:3000/blog');
-    //         const data = await res.json();
-    //         setData(data);
-    //     }
-    //     fetchData();
-    // }, []);
     return (
         <Layout blogs>
             <Head>
@@ -49,7 +39,9 @@ export default function Blog({ blog }) {
                             <h1>{item.title}</h1>
                             <h3>{item.content.slice(0, 150)}...</h3>
                         </div>
-                        <button className={styles.readButton} onClick={() => myFunction()} id="myBtn">Read more</button>
+                        <Link href={`/posts/${item._id}`}>
+                            <button className={styles.readButton} id="myBtn">Read more</button>
+                        </Link>
                     </div>
                 ))}
             </div>
