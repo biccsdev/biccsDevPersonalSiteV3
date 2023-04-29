@@ -34,7 +34,7 @@ export default function Blog({ blog }) {
             <div className={styles.mainContainer}>
                 {blog.map(item => (
                     <div key={item._id} className={styles.blogCard}>
-                        <Image src={article} alt="Background image" width={150} height={100} />
+                        {/* <Image src={article} alt="Background image" width={150} height={100} /> */}
                         <div className={styles.cardText}>
                             <h1>{item.title}</h1>
                             <h3>{item.content.slice(0, 150)}...</h3>

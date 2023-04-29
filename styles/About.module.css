@@ -149,3 +149,9 @@
   text-align: center;
   width: 100%;
 }
+
+.videosContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}

@@ -217,6 +217,11 @@ export default function About() {
                         <li>Playing basketball - I've played basketball since elementary school, won several state championships, went to a international tournament representing Mexico in Las Vegas and got 3rd place at a national tournament - ball is life</li>
                         <li>Virtual reality - ever since I got in touch with virtual reality it's been one of my favorites technologies one can get their hands on right now, it allows us to create and experience so many things we simply cannot without it</li>
                     </ul>
+                    <div className={styles.videosContainer}>
+                        <Image src={'/gifs/parkGif.gif'} height={300} width={400} alt="drone" />
+                        <Image src={'/gifs/salinasNightGif.gif'} height={300} width={400} alt="drone" />
+                        <Image src={'/gifs/treeGif.gif'} height={300} width={400} alt="drone" />
+                    </div>
                 </div>
             </main>
         </Layout>

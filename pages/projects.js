@@ -31,8 +31,8 @@ export default function Project() {
                     <div className={styles.card}>
                         <Image src={'/projects/videoSMB.gif'} alt='token gated app gif example' width={300} height={300} />
                         <div className={styles.cardInfo}>
-                            <h2>Token gated system (SMB frames)</h2>
-                            <p> SMB Frames is an app I made as a proof of concept about token gated content as a use case for web3, made with NextJS for the front-end and Metaplex, Anchor and @solana/web3.js for the token gated system implementation.
+                            <h2>Blockchain Token Gated System</h2>
+                            <p> This is an app I made as a proof of concept about token gated content as a use case for web3, made with NextJS for the front-end and Metaplex, Anchor and @solana/web3.js for the token gated system implementation.
                                 This is done to incentivize users to take part in a platform, or to provide exclusive access to certain content or services.
                                 Token gating can be used to create loyalty programs, reward content creators, or to drive user engagement.</p>
                             <a href='https://smbframes.vercel.app/' target='_blank' rel="noreferrer">
@@ -44,9 +44,9 @@ export default function Project() {
                         </div>
                     </div>
                     <div className={styles.card}>
-                        <Image src={'/projects/villinzBot.jpg'} alt='token gated app gif example' width={300} height={300} />
+                        <Image src={'/twtlogo.png'} alt='token gated app gif example' width={300} height={300} />
                         <div className={styles.cardInfo}>
-                            <h2>Twitter Automated Mint Bot</h2>
+                            <h2>Twitter Automated Blockchain Mint Bot</h2>
                             <p> This twitter bot was made as a contribution to a web3 community, in order to increase the noise about the collection and make more people aware of this community.
                                 It was made using twitter API V2 for interacting with twitter, ExpressJS for the backend and @solana/web3.js library for interacting with the Solana Blockchain.
                                 Twitter bots can be a great way to keep your followers up to date on the latest mints of your Digital Collectibles collection.
@@ -82,12 +82,25 @@ export default function Project() {
                     <div className={styles.card}>
                         <Image src={'/projects/chatAppLogo.png'} alt='token gated app gif example' width={300} height={300} />
                         <div className={styles.cardInfo}>
-                            <h2>Full stack Chat App</h2>
+                            <h2>Full Stack Chat App</h2>
                             <p>This chat app was made with NodeJs implementing ExpressJS and Mongoose for the backend, and Html, css and JS vanilla for the Frontend.
                                 This app makes use of websocket for bi-directional, full-duplex communication between the client and server. Websockets allow for real-time
                                 communication between the two endpoints, allowing for faster and more efficient communication.  </p>
                             <a href='https://github.com/biccsdev/chatApp' target='_blank' rel="noreferrer">
                                 <button className={styles.cardButton}>See code</button>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className={styles.card}>
+                        <Image src={'/projects/vlnzgif.gif'} alt='token gated app gif example' width={300} height={300} />
+                        <div className={styles.cardInfo}>
+                            <h2>Token Gated Solana Wallets Explorer</h2>
+                            <p>This system was build using NextJS and Typescript with @Solana/web3.js library to be able to
+                                connect to the Blockchain. It allows holders of certain token to access the wallet finder
+                                system, where they input a Wallet Address and retrieve those wallet's assets.</p>
+                            <a href='https://villinz-hub.vercel.app/' target='_blank' rel="noreferrer">
+                                <button className={styles.cardButton}>Visit Site</button>
                             </a>
                         </div>
 
