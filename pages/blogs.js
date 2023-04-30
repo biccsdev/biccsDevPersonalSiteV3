@@ -5,7 +5,7 @@ import styles from '../styles/Blogs.module.css'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-import article from '../public/article1.png';
+const url = process.env.BACKEND_URL;
 
 export default function Blog({ blog }) {
     if (!blog) {
@@ -50,7 +50,7 @@ export default function Blog({ blog }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch('http://localhost:3000/blog');
+    const res = await fetch(url);
     const blog = await res.json();
     return {
         props: {

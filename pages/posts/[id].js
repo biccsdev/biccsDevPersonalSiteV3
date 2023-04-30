@@ -1,6 +1,8 @@
 import Layout from "../../components/layout";
 import styles from "../../styles/Posts.module.css";
 
+const url = process.env.BACKEND_URL;
+
 export default function Post({ postData }) {
     if (!postData) {
         return <h1>Loading...</h1>;
@@ -21,7 +23,7 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticPaths() {
-    const res = await fetch("http://localhost:3000/blog");
+    const res = await fetch(url);
     const data = await res.json();
     const paths = data.map((item) => ({ params: { id: item._id } }));
     return {
@@ -31,7 +33,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch("http://localhost:3000/blog");
+    const res = await fetch(url);
     const data = await res.json();
     const postData = data.filter((item) => item._id === params.id);
     return {
