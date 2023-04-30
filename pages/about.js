@@ -39,7 +39,7 @@ export default function About() {
             <Head>
                 <link rel='shortcut icon' href='/about.ico' />
                 <title>
-                    Who is @biccsdev? | Get in touch | Download Resume
+                    Who is biccsdev? | Get in touch | Download Resume
                 </title>
                 <meta
                     name="description"
@@ -59,13 +59,13 @@ export default function About() {
             <main className={styles.mainContainer}>
                 <div className={styles.aboutMeContainer}>
                     <h1>Hello World!</h1>
-                    <Image className={styles.pfp} src={pfp} width={100} height={100} alt='biccsdev pfp of a BVDCAT ( an nft on the solana blockchain )' />
+                    {/* <Image className={styles.pfp} src={pfp} width={100} height={100} alt='biccsdev pfp of a BVDCAT ( an nft on the solana blockchain )' /> */}
                     <div className={styles.mainContainerText}>
-                        <p>I'm Victor Torres also known as @biccsdev, a software engineer/web developer, blockchain and augmented reality enthusiast. My passion for technology and coding began in my early years of life and eventually found myself working as a web developer, generating solutions for local businesses. Soon after, I discovered the potential of virtual and augmented reality and the power of blockchain technology.
+                        <p>I'm Victor Torres, a software engineer/web developer, blockchain and augmented reality enthusiast. My passion for technology and coding began in my early years of life and eventually found myself working as a web developer, generating solutions for local businesses. Soon after, I discovered the potential of virtual and augmented reality and the power of blockchain technology.
 
-                            After that<span id="dots">...</span><span id="more" className={styles.more}> I quickly became a passionate advocate of these technologies, and began to develop applications and projects that made use of these technologies. I've since worked on a number of APIs, web2 websites and developed several web applications for web3 projects. I'm looking forward learning more and eventually developing my first virtual reality application.
+                            After that<span id="dots">...</span><span id="more" className={styles.more}> I quickly became a passionate advocate of these technologies, and began to develop applications and projects that made use of these technologies. I've since worked on a number of APIs, web2 websites and developed several web applications for web3 projects. I'm looking forward learning more and eventually developing my first augmented reality application.
 
-                                Also I have a deep interest in virtual reality and I'm currently exploring the potential for applications within the virtual/augmented reality sphere. I'm particularly interested in the potential for virtual reality to facilitate the development of new and innovative applications across all industries.
+                                Also, I have a deep interest in virtual reality and I'm currently exploring the potential for applications within the virtual/augmented reality sphere that facilitate the development of new and innovative applications across all industries.
 
                                 I'm committed to helping people understand the potential of new technologies, and constantly looking for new ways to use these technologies to improve people's lives. I'm an active member of these technologies communities and always looking for new ways to contribute to the development of the industry.</span></p>
                         <button className={styles.readButton} onClick={() => myFunction()} id="myBtn">Read more</button>
@@ -173,7 +173,7 @@ export default function About() {
                 </div>
                 <div className={styles.socialsContainer}>
                     <h1>Socials</h1>
-                    <a href='https://twitter.com/biccsdev' target='_blank' rel="noreferrer" className={styles.socialMediaContainer}>
+                    <a href='https://twitter.com/itsbiccs' target='_blank' rel="noreferrer" className={styles.socialMediaContainer}>
                         <Image src={'/socialsLogos/twitterLogo.png'} height={48} width={48} alt='Twitter logo' />
                         <h3>Twitter</h3>
                     </a>
@@ -213,9 +213,8 @@ export default function About() {
                     <h3>Other stuff...</h3>
                     <ul>
                         <li>Going to the gym - exercising the body keeps the mind active</li>
-                        <li>Flying drones - It keeps me entertained and allows me to explore different areas I would be able to without it</li>
+                        <li>Flying drones - It keeps me entertained and allows me to explore different areas I wouldnt be able to without it</li>
                         <li>Playing basketball - I've played basketball since elementary school, won several state championships, went to a international tournament representing Mexico in Las Vegas and got 3rd place at a national tournament - ball is life</li>
-                        <li>Virtual reality - ever since I got in touch with virtual reality it's been one of my favorites technologies one can get their hands on right now, it allows us to create and experience so many things we simply cannot without it</li>
                     </ul>
                     <div className={styles.videosContainer}>
                         <Image src={'/gifs/parkGif.gif'} height={300} width={400} alt="drone" />

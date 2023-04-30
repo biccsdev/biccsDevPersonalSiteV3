@@ -45,9 +45,9 @@ export default function Home() {
       </Head>
       <div className={styles.main}>
         <div className={styles.title}>
-          <div className={styles.titleImage}>
+          {/* <div className={styles.titleImage}>
             <Image className={styles.myImg} src={pfp} alt="cat with ghost fur" width={250} height={250}></Image>
-          </div>
+          </div> */}
           <h1>Hi, I'm Victor Torres, a Software Engineer based in Mexico.</h1>
         </div>
         <div className={styles.description}>
