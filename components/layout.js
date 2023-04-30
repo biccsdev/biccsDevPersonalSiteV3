@@ -9,7 +9,7 @@ export default function Layout({ children, home, about, projects, blogs, archive
     return (
         <div className={styles.main}>
             <Head>
-                <link rel="icon" href={homeFavicon} />
+                <link rel="icon" href={`${homeFavicon}`} />
                 <meta
                     name="description"
                     content="biccsdev personal portafolio"

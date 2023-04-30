@@ -1,12 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Layout from '../components/layout'
 import styles from '../styles/Archives.module.css'
 import { Chrono } from 'react-chrono'
-
-import v3 from '../public/v3.jpg';
-import v2 from '../public/v2.jpg';
-import v1 from '../public/v1.jpg';
 
 export default function Archive() {
     return (
