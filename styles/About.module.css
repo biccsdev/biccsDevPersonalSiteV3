@@ -152,12 +152,14 @@
 
 .videosContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 2rem;
+  justify-content: center;
 }
 
 .hobbiesImagesContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
