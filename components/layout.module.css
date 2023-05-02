@@ -6,10 +6,13 @@
 }
 
 .main {
-  min-height: 100vh;
   font-family: "PressStart2P", sans-serif;
   color: var(--text);
   background-color: var(--backLight);
+}
+
+.mainContainer {
+  min-height: 100vh;
 }
 
 .headerContainer {
