@@ -33,26 +33,28 @@ export default function Home() {
                 </Head>
                 <main className={styles.main}>
                     <form onSubmit={handleSubmit} className={styles.form}>
-                        <label htmlFor="name">Name:</label>
+                        <label className={styles.label} htmlFor="name">Name:</label>
                         <input
                             id="name"
                             type="text"
                             onChange={e => setName(e.target.value)}
                         />
-                        <label htmlFor="email">Email:</label>
+                        <label className={styles.label} htmlFor="email">Email:</label>
                         <input
                             id="email"
                             type="email"
                             onChange={e => setEmail(e.target.value)}
                         />
-                        <label htmlFor="message">Message:</label>
+                        <label className={styles.label} htmlFor="message">Message:</label>
                         <textarea
                             id="message"
                             type="text"
                             rows="4"
                             onChange={e => setMessage(e.target.value)}
                         />
-                        <button className={styles.buttonContainer} role='button' type="submit">Send</button>
+                        <div className={styles.buttonParentContainer}>
+                            <button className={styles.buttonContainer} role='button' type="submit">Send</button>
+                        </div>
                     </form>
                 </main>
             </div>

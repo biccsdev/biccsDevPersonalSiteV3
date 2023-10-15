@@ -9,7 +9,7 @@ export default function Project() {
             <Head>
                 <link rel='shortcut icon' href='/projects.ico' />
                 <title>
-                    Junior developer projects | Web 2, Web 3, Frontend, Backend, APIS, Fullstack
+                    Software Engineer projects | Web Development, Frontend, Backend, APIS, Fullstack
                 </title>
                 <meta
                     name="description"
