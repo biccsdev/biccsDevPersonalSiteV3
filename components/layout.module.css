@@ -30,7 +30,7 @@
 .menuItems {
   width: 100%;
   display: flex;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 .menuItems h1 {
@@ -41,7 +41,7 @@
   width: 100%;
   display: flex;
   font-size: 0.6rem;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
