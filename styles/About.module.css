@@ -85,7 +85,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  text-align: justify;
 }
 
 .aboutMeContainer h1 {
@@ -94,7 +93,6 @@
 }
 
 .mainContainerText {
-  text-align: justify;
 }
 
 .aboutMeContainer p {
@@ -141,7 +139,6 @@
 
 .hobbiesContainer {
   width: 80%;
-  text-align: justify;
   margin: 0 auto;
 }
 

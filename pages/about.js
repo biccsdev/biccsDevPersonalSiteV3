@@ -39,7 +39,7 @@ export default function About() {
             <Head>
                 <link rel='shortcut icon' href='/about.ico' />
                 <title>
-                    Who is biccsdev? | Get in touch | Download Resume
+                    Who is biccs? | Get in touch | Download Resume
                 </title>
                 <meta
                     name="description"
@@ -59,7 +59,6 @@ export default function About() {
             <main className={styles.mainContainer}>
                 <div className={styles.aboutMeContainer}>
                     <h1>Hello World!</h1>
-                    {/* <Image className={styles.pfp} src={pfp} width={100} height={100} alt='biccsdev pfp of a BVDCAT ( an nft on the solana blockchain )' /> */}
                     <div className={styles.mainContainerText}>
                         <p>I'm Victor Torres, a software engineer/web developer, blockchain and augmented reality enthusiast. My passion for technology and coding began in my early years of life and eventually found myself working as a web developer, generating solutions for local businesses. Soon after, I discovered the potential of virtual and augmented reality and the power of blockchain technology.
 
@@ -197,11 +196,10 @@ export default function About() {
                     <ul>
                         <li><a href='https://www.amazon.com/Think-Grow-Rich-Napoleon-Hill/dp/0449214923' target='_blank' rel="noreferrer">Think and grow rich</a></li>
                         <li><a href='https://www.amazon.com/Breaking-Habit-Being-Yourself-Dispenza-ebook/dp/B006M7A8JI' target='_blank' rel="noreferrer">Break the habit of being yourself</a></li>
-                        <li><a href='https://www.amazon.com/Rich-Dad-Poor-Teach-Middle/dp/1612680194' target='_blank' rel="noreferrer">Rich dad Poor dad</a></li>
+                        <li><a href='https://www.amazon.com.mx/1984-George-Orwell/dp/6073116330/ref=sr_1_2?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=1984&sr=8-2&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47' target='_blank' rel="noreferrer">1984</a></li>
                         <li><a href='https://www.amazon.com/-/es/Viktor-Frankl/dp/0807014273/ref=d_pd_sbs_sccl_1_1/146-0786288-4084368?pd_rd_w=0LWPs&content-id=amzn1.sym.3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_r=674GP7F16HHZ9AHXF28A&pd_rd_wg=c8IdO&pd_rd_r=8c213fea-a4ea-46a8-a42d-b386211c554e&pd_rd_i=0807014273&psc=1' target='_blank' rel="noreferrer">Man's search for meaning</a></li>
                     </ul>
                     <h2>Art</h2>
-                    <h3>Another thing I enjoy doing is learning about art and practicing it...</h3>
                     <h3>Here are some of my Pixel Art creations.</h3>
                     <div className={styles.hobbiesImagesContainer}>
                         <Image src={'/hobbies/bvdbytes.png'} height={200} width={300} alt="bvdcat street pixel art made by biccs" />
@@ -210,11 +208,11 @@ export default function About() {
                         <Image src={'/hobbies/villinz.gif'} height={200} width={200} alt="villinz pixel art gif made by biccs" />
                         <Image src={'/hobbies/mixiDoom.png'} height={200} width={200} alt="MF DOOM profile picture pixel art made by biccs" />
                     </div>
-                    <h3>Other stuff...</h3>
+                    <h2>Other stuff...</h2>
                     <ul>
                         <li>Going to the gym - exercising the body keeps the mind active</li>
-                        <li>Flying drones - It keeps me entertained and allows me to explore different areas I wouldnt be able to without it</li>
-                        <li>Playing basketball - I've played basketball since elementary school, won several state championships, went to a international tournament representing Mexico in Las Vegas and got 3rd place at a national tournament - ball is life</li>
+                        <li>FPV Drones - It keeps me entertained and allows me to explore different areas I wouldnt be able to without it</li>
+                        <li>Basketball - I've played basketball since elementary school, won several state championships, went to a international tournament representing Mexico and got 3rd place at a national tournament - ball is life</li>
                     </ul>
                     <div className={styles.videosContainer}>
                         <Image src={'/gifs/parkGif.gif'} height={300} width={400} alt="drone" />
