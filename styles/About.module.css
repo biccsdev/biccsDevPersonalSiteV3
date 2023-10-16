@@ -9,6 +9,13 @@
   margin-right: 40px;
 }
 
+@media (min-width: 1024px) {
+  .mainContainer {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 .pfp {
   border-width: 3px;
   border-style: solid;
@@ -90,9 +97,6 @@
 .aboutMeContainer h1 {
   text-align: center;
   width: 100%;
-}
-
-.mainContainerText {
 }
 
 .aboutMeContainer p {
