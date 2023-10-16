@@ -1,44 +1,59 @@
 import Layout from "../../components/layout";
 import styles from "../../styles/Posts.module.css";
+import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react';
 
-const url = process.env.BACKEND_URL;
+export default function Post() {
+    const router = useRouter();
+    const { id } = router.query;
+    const [blogData, setBlogData] = useState({ title: '', content: '' });
 
-export default function Post({ postData }) {
-    if (!postData) {
-        return <h1>Loading...</h1>;
+    useEffect(() => {
+        if (id) {
+            const fetchData = async () => {
+                try {
+                    const response = await fetch('/blogs.json');
+                    if (response.ok) {
+                        const data = await response.json();
+                        const filteredData = data.find(item => item.id === id);
+                        if (filteredData) {
+                            setBlogData(filteredData);
+                        } else {
+                            console.error('Blog not found.');
+                        }
+                    } else {
+                        console.error('Failed to fetch data.');
+                    }
+                } catch (error) {
+                    console.error('An error occurred while fetching data:', error);
+                }
+            };
+
+            fetchData();
+        }
+    }, [id]);
+
+    const renderContent = () => {
+        const contentLines = blogData.content.split('\n');
+        return (
+            <div>
+                {contentLines.map((line, index) => (
+                    <p className={styles.paragraph} key={index}>{line}</p>
+                ))}
+            </div>
+        );
     }
-    const { title, author, content } = postData[0];
+
     return (
-        <Layout blogs>
+        <Layout>
             <div className={styles.mainContainer}>
                 <div className={styles.titleContainer}>
-                    <h1>{title}</h1>
-                    <h3>Author: @{author}</h3>
+                    <h1>{blogData.title}</h1>
+                    <h3>Author: @biccs</h3>
                 </div>
-                <p>{content}</p>
+                {renderContent()}
             </div>
-
         </Layout>
     );
 }
 
-export async function getStaticPaths() {
-    const res = await fetch(url);
-    const data = await res.json();
-    const paths = data.map((item) => ({ params: { id: item._id } }));
-    return {
-        paths,
-        fallback: false,
-    };
-}
-
-export async function getStaticProps({ params }) {
-    const res = await fetch(url);
-    const data = await res.json();
-    const postData = data.filter((item) => item._id === params.id);
-    return {
-        props: {
-            postData,
-        },
-    };
-}

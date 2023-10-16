@@ -24,6 +24,13 @@ export default function Layout({ children }) {
         setSelectedLink(router.pathname);
     }, [router.pathname]);
 
+    useEffect(() => {
+        // Check if the current route matches a /post/ route and select the 'BLOGS' link accordingly
+        if (router.pathname.startsWith('/posts/')) {
+            setSelectedLink('/blogs');
+        }
+    }, [router.pathname]);
+
     return (
         <div className={styles.main}>
             <Head>

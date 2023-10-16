@@ -48,7 +48,7 @@ export default function Blog({ blog }) {
             </Head>
             <div className={styles.mainContainer}>
                 {blogData.map(item => (
-                    <div key={item._id} className={styles.blogCard}>
+                    <div key={item.id} className={styles.blogCard}>
                         <div className={styles.cardText}>
                             <h1>{item.title}</h1>
                             <h3>{item.content.slice(0, 100)}...</h3>

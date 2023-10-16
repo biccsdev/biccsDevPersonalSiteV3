@@ -44,7 +44,7 @@ export default function Home() {
           </h2>
         </div>
         <div className={styles.contact}>
-          <h1>Lets get in touch!</h1>
+          <h1>Get in touch!</h1>
           <div className={styles.buttonsContainer}>
             <button className={styles.button54} role='button'><Link href='/contact'>Contact</Link></button>
           </div>
