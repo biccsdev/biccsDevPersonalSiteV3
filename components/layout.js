@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 import homeFavicon from "../public/home.ico";
 
-export default function Layout({ children, home, about, projects, blogs, archives }) {
+export default function Layout({ children }) {
     const router = useRouter();
     const [selectedLink, setSelectedLink] = useState('');
 

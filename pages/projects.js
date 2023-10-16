@@ -5,7 +5,7 @@ import styles from '../styles/Projects.module.css'
 
 export default function Project() {
     return (
-        <Layout projects>
+        <Layout >
             <Head>
                 <link rel='shortcut icon' href='/projects.ico' />
                 <title>

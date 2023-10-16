@@ -5,7 +5,7 @@ import { Chrono } from 'react-chrono'
 
 export default function Archive() {
     return (
-        <Layout archives>
+        <Layout >
             <Head>
                 <link rel='shortcut icon' href='/archive.ico' />
                 <title>

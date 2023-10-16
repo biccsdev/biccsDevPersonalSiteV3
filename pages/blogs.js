@@ -5,26 +5,41 @@ import styles from '../styles/Blogs.module.css'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const url = process.env.BACKEND_URL;
 
 export default function Blog({ blog }) {
-    if (!blog) {
-        return <h1>Loading...</h1>
-    }
+    const [blogData, setBlogData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/blogs.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    setBlogData(data);
+                } else {
+                    console.error('Failed to fetch data.');
+                }
+            } catch (error) {
+                console.error('An error occurred while fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     return (
-        <Layout blogs>
+        <Layout >
             <Head>
                 <link rel='shortcut icon' href='/blogs.ico' />
                 <title>
-                    Blog about software development and technology in general | Web 3 | Web development | Virtual Reality
+                    Blog about software development and technology in general | Web development | Virtual Reality
                 </title>
                 <meta
                     name="description"
                     content="Tech blog written by a developer"
                     key="desc"
                 />
-                <meta property="og:title" content={`biccsdev's blog | Check the latest post!`} />
+                <meta property="og:title" content={`biccs's blog | Check the latest post!`} />
 
                 <meta
                     property="og:image"
@@ -32,14 +47,13 @@ export default function Blog({ blog }) {
                 />
             </Head>
             <div className={styles.mainContainer}>
-                {blog.map(item => (
+                {blogData.map(item => (
                     <div key={item._id} className={styles.blogCard}>
-                        {/* <Image src={article} alt="Background image" width={150} height={100} /> */}
                         <div className={styles.cardText}>
                             <h1>{item.title}</h1>
-                            <h3>{item.content.slice(0, 150)}...</h3>
+                            <h3>{item.content.slice(0, 100)}...</h3>
                         </div>
-                        <Link href={`/posts/${item._id}`}>
+                        <Link href={`/posts/${item.id}`}>
                             <button className={styles.readButton} id="myBtn">Read more</button>
                         </Link>
                     </div>
@@ -47,14 +61,4 @@ export default function Blog({ blog }) {
             </div>
         </Layout>
     )
-}
-
-export async function getStaticProps() {
-    const res = await fetch(url);
-    const blog = await res.json();
-    return {
-        props: {
-            blog,
-        },
-    };
 }

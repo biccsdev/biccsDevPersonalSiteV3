@@ -11,7 +11,7 @@ Home.faviconUrl = "public/home.ico";
 export default function Home() {
 
   return (
-    <Layout home>
+    <Layout >
       <Head>
         <link rel='shortcut icon' href='/home.ico' />
         <title>

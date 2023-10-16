@@ -7,16 +7,14 @@
   color: var(--back);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+  width: 40%;
+  margin: 0 auto;
 }
 
 .blogCard {
-  width: 80%;
+  width: 100%;
   display: flex;
-  margin-top: 60px;
   align-items: center;
-  text-align: justify;
 }
 
 .cardText {
