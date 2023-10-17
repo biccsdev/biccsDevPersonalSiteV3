@@ -2,8 +2,36 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../components/layout'
 import styles from '../styles/Projects.module.css'
+import React, { useState, useEffect } from 'react';
+
 
 export default function Project() {
+    const [projectsData, setProjectsData] = useState([]);
+    const [showFullDescriptions, setShowFullDescriptions] = useState(Array(projectsData.length).fill(false));
+
+    const toggleDescription = (index) => {
+        const newShowFullDescriptions = [...showFullDescriptions];
+        newShowFullDescriptions[index] = !showFullDescriptions[index];
+        setShowFullDescriptions(newShowFullDescriptions);
+    };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/projects.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    setProjectsData(data);
+                } else {
+                    console.error('Failed to fetch data.');
+                }
+            } catch (error) {
+                console.error('An error occurred while fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
     return (
         <Layout >
             <Head>
@@ -19,7 +47,7 @@ export default function Project() {
                 <meta property="og:title" content="Junior developer projects | Web 2, Web 3, Frontend, Backend, APIS" />
                 <meta
                     property="og:description"
-                    content={`Check out @biccsdev's latest public projects`}
+                    content={`Check out @biccs's latest public projects`}
                 />
                 <meta
                     property="og:image"
@@ -28,7 +56,31 @@ export default function Project() {
             </Head>
             <main className={styles.mainContainer}>
                 <div className={styles.cardsContainer}>
-                    <div className={styles.card}>
+                    {projectsData.map(item => (
+                        <div className={styles.card}>
+                            {/* <Image src={'/projects/videoSMB.gif'} alt='token gated app gif example' width={300} height={300} /> */}
+                            <div className={styles.cardInfo}>
+                                <h2>{item.title}</h2>
+                                {/* <p>{item.description}</p> */}
+                                <p>
+                                    {showFullDescriptions[item.id]
+                                        ? item.description // Show full description when clicked
+                                        : `${item.description.substring(0, 50)}${item.description.length > 50 ? '...' : ''}`}
+                                </p>
+                                {(item.codeLink != "") && (
+                                    <a href={item.codeLink} target='_blank' rel="noreferrer">
+                                        <button className={styles.cardButton}>See code</button>
+                                    </a>
+                                )}
+                                {(item.siteLink != "") && (
+                                    <a href={item.siteLink} target='_blank' rel="noreferrer">
+                                        <button className={styles.cardButton}>Go to site</button>
+                                    </a>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                    {/* <div className={styles.card}>
                         <Image src={'/projects/videoSMB.gif'} alt='token gated app gif example' width={300} height={300} />
                         <div className={styles.cardInfo}>
                             <h2>Blockchain Token Gated System</h2>
@@ -103,8 +155,7 @@ export default function Project() {
                                 <button className={styles.cardButton}>Visit Site</button>
                             </a>
                         </div>
-
-                    </div>
+                    </div> */}
                 </div>
             </main>
         </Layout>

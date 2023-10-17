@@ -10,7 +10,7 @@
   width: 100%;
 }
 
-.cardsContainer {
+/* .cardsContainer {
   margin-top: 50px;
   width: 80%;
   display: flex;
@@ -24,7 +24,7 @@
   text-align: center;
   align-items: center;
   margin-bottom: 50px;
-}
+} */
 
 .card p {
   text-align: justify;
@@ -63,12 +63,40 @@
   left: 5px;
 }
 
-@media (max-width: 769px) {
+/* @media (max-width: 769px) {
   .card {
     justify-content: center;
     flex-wrap: wrap;
   }
   .cardInfo {
     margin-left: 0px;
+  }
+} */
+
+.cardsContainer {
+  margin-top: 50px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1; /* Each card takes 25% of the available space */
+  max-width: calc(25% - 20px); /* Adjust margin, e.g., 20px */
+  color: var(--back);
+  text-align: center;
+  align-items: center;
+  margin-bottom: 50px;
+  min-height: 500px;
+}
+
+/* Media Query for smaller screens, adjust max-width accordingly */
+@media (max-width: 768px) {
+  .cardsContainer {
+    justify-content: center;
+  }
+  .card {
+    max-width: calc(50% - 20px); /* For 50% width on smaller screens */
   }
 }
