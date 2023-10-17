@@ -14,25 +14,25 @@ export default function About() {
 
     //This is a helper function that changes the value of a state variable on button click
     // in order to summon useEffect and display the about me info
-    const myFunction = () => {
-        helper ? setHelper(false) : setHelper(true);
-    }
+    // const myFunction = () => {
+    //     helper ? setHelper(false) : setHelper(true);
+    // }
 
-    useEffect(() => {
-        var dots = document.getElementById("dots");
-        var moreText = document.getElementById("more");
-        var btnText = document.getElementById("myBtn");
+    // useEffect(() => {
+    //     var dots = document.getElementById("dots");
+    //     var moreText = document.getElementById("more");
+    //     var btnText = document.getElementById("myBtn");
 
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Read more";
-            moreText.style.display = "none";
-        } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Read less";
-            moreText.style.display = "inline";
-        }
-    })
+    //     if (dots.style.display === "none") {
+    //         dots.style.display = "inline";
+    //         btnText.innerHTML = "Read more";
+    //         moreText.style.display = "none";
+    //     } else {
+    //         dots.style.display = "none";
+    //         btnText.innerHTML = "Read less";
+    //         moreText.style.display = "inline";
+    //     }
+    // })
 
     return (
         <Layout about>
@@ -60,14 +60,24 @@ export default function About() {
                 <div className={styles.aboutMeContainer}>
                     <h1>Hello World!</h1>
                     <div className={styles.mainContainerText}>
-                        <p>I'm Victor Torres, a software engineer/web developer, blockchain and augmented reality enthusiast. My passion for technology and coding began in my early years of life and eventually found myself working as a web developer, generating solutions for local businesses. Soon after, I discovered the potential of virtual and augmented reality and the power of blockchain technology.
+                        {/* <p>I'm Victor Torres, a software engineer/web developer, blockchain and augmented reality enthusiast. My passion for technology and coding began in my early years of life and eventually found myself working as a web developer, generating solutions for local businesses. Soon after, I discovered the potential of virtual and augmented reality and the power of blockchain technology.
 
                             After that<span id="dots">...</span><span id="more" className={styles.more}> I quickly became a passionate advocate of these technologies, and began to develop applications and projects that made use of these technologies. I've since worked on a number of APIs, web2 websites and developed several web applications for web3 projects. I'm looking forward learning more and eventually developing my first augmented reality application.
 
                                 Also, I have a deep interest in virtual reality and I'm currently exploring the potential for applications within the virtual/augmented reality sphere that facilitate the development of new and innovative applications across all industries.
 
                                 I'm committed to helping people understand the potential of new technologies, and constantly looking for new ways to use these technologies to improve people's lives. I'm an active member of these technologies communities and always looking for new ways to contribute to the development of the industry.</span></p>
-                        <button className={styles.readButton} onClick={() => myFunction()} id="myBtn">Read more</button>
+                        <button className={styles.readButton} onClick={() => myFunction()} id="myBtn">Read more</button> */}
+                        <p>I'm Victor Torres, a software engineer/web developer, blockchain and augmented reality enthusiast. My passion for technology and coding began in my early years of life and eventually found myself working as a web developer, generating solutions for local businesses.</p>
+
+                        <p>Soon after, I discovered the potential of virtual and augmented reality and the power of blockchain technology.</p>
+
+                        <p>After that I quickly became a passionate advocate of these technologies, and began to develop applications and projects that make use of these technologies. I've since worked on a number of APIs, web2 websites and developed several web applications for web3 projects. I'm looking forward to learning more and collaborate with different people, solving diverse problems.</p>
+
+                        <p>Also, I have a deep interest in virtual reality, and I'm currently exploring the potential for applications within the virtual/augmented reality sphere that facilitate the development of new and innovative applications across all industries</p>
+
+                        <p>I'm committed to helping people understand the potential of new technologies, and constantly looking for new ways to use these technologies to improve people's lives. I'm an active member of these technologies communities and always looking for new ways to contribute to the development of the industry.</p>
+
                     </div>
                 </div>
                 <div className={styles.downloadResumeContainer}>
@@ -221,6 +231,6 @@ export default function About() {
                     </div>
                 </div>
             </main>
-        </Layout>
+        </Layout >
     )
 }
