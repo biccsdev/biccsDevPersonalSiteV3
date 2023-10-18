@@ -70,6 +70,9 @@ export default function Project() {
                             {/* <Image src={'/projects/videoSMB.gif'} alt='token gated app gif example' width={300} height={300} /> */}
                             <div className={styles.cardInfo}>
                                 <h2>{item.title}</h2>
+                                {item.tags.map(itemWithin => (
+                                    <a className={styles.tag}>{itemWithin}</a>
+                                ))}
                                 <p>
                                     {showFullDescriptions[item.id]
                                         ? item.description // Show full description when clicked
@@ -93,7 +96,12 @@ export default function Project() {
                         <div className={styles.overlay}>
                             <div className={styles.cardPopUp}>
                                 <h2>{projectsData[selectedCard].title}</h2>
-                                <Image src={projectsData[selectedCard].media} alt='media related to project' height={300} width={300}></Image>
+                                <div className={styles.popUpImage}>
+                                    <Image src={projectsData[selectedCard].media} alt='media related to project' height={300} width={300}></Image>
+                                </div>
+                                {projectsData[selectedCard].tags.map(itemWithin => (
+                                    <a className={styles.tag}>{itemWithin}</a>
+                                ))}
                                 <p>{projectsData[selectedCard].description}</p>
                                 {(selectedCard.codeLink != "") && (
                                     <a href={selectedCard.codeLink} target='_blank' rel="noreferrer">
