@@ -7,7 +7,8 @@
   color: var(--back);
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
 }
 
 /* .cardsContainer {
@@ -25,14 +26,6 @@
   align-items: center;
   margin-bottom: 50px;
 } */
-
-.card p {
-  text-align: justify;
-}
-
-.cardInfo {
-  margin-left: 40px;
-}
 
 .card h2 {
   width: 100%;
@@ -78,17 +71,28 @@
   width: 80%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .card {
   flex: 1; /* Each card takes 25% of the available space */
-  max-width: calc(25% - 20px); /* Adjust margin, e.g., 20px */
+  max-width: calc(50%); /* Adjust margin, e.g., 20px */
+  min-width: calc(25%);
   color: var(--back);
-  text-align: center;
+  text-align: left;
   align-items: center;
-  margin-bottom: 50px;
-  min-height: 500px;
+  margin: 10px;
+  padding: 10px;
+  border-color: var(--back);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+.cardInfo {
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* Media Query for smaller screens, adjust max-width accordingly */
@@ -97,6 +101,6 @@
     justify-content: center;
   }
   .card {
-    max-width: calc(50% - 20px); /* For 50% width on smaller screens */
+    max-width: calc(100% - 20px); /* For 50% width on smaller screens */
   }
 }
