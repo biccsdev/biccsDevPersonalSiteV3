@@ -7,14 +7,9 @@ import React, { useState, useEffect } from 'react';
 
 export default function Project() {
     const [projectsData, setProjectsData] = useState([]);
-    const [showFullDescriptions, setShowFullDescriptions] = useState(Array(projectsData.length).fill(false));
     const [selectedCard, setSelectedCard] = useState(null);
+    const [selectedTags, setSelectedTags] = useState([]);
 
-    const toggleDescription = (index) => {
-        const newShowFullDescriptions = [...showFullDescriptions];
-        newShowFullDescriptions[index] = !showFullDescriptions[index];
-        setShowFullDescriptions(newShowFullDescriptions);
-    };
 
     const openCard = (id) => {
         setSelectedCard(id);
@@ -24,6 +19,17 @@ export default function Project() {
         setSelectedCard(null);
     };
 
+    const handleTagClick = (tag) => {
+        if (tag === 'All') {
+            setSelectedTags([]); // Clear selected tags to show all cards
+        }
+
+        if (tag === 'Web3') { setSelectedTags(["Web3"]); }
+        if (tag === 'Front-End') { setSelectedTags(["Front-End"]); }
+        if (tag === 'Back-End') { setSelectedTags(["Back-End"]); }
+
+
+    };
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -41,6 +47,14 @@ export default function Project() {
 
         fetchData();
     }, []);
+
+    // Filter projects based on selected tags
+    const filteredProjects = selectedTags.length
+        ? projectsData.filter((project) =>
+            project.tags.some((tag) => selectedTags.includes(tag))
+        )
+        : projectsData;
+
     return (
         <Layout >
             <Head>
@@ -64,19 +78,24 @@ export default function Project() {
                 />
             </Head>
             <main className={styles.mainContainer}>
+                <div className={styles.tagsContainer}>
+                    <button className={styles.cardButton} onClick={() => handleTagClick('All')}>All</button>
+                    <button className={styles.cardButton} onClick={() => handleTagClick('Web3')}>Web3</button>
+                    <button className={styles.cardButton} onClick={() => handleTagClick('Front-End')}>Front-End</button>
+                    <button className={styles.cardButton} onClick={() => handleTagClick('Back-End')}>Back-End</button>
+                </div>
                 <div className={styles.cardsContainer}>
-                    {projectsData.map(item => (
+                    {filteredProjects.map(item => (
                         <div className={styles.card} onClick={() => openCard(item.id)} key={item.id}>
-                            {/* <Image src={'/projects/videoSMB.gif'} alt='token gated app gif example' width={300} height={300} /> */}
                             <div className={styles.cardInfo}>
                                 <h2>{item.title}</h2>
-                                {item.tags.map(itemWithin => (
-                                    <a className={styles.tag} key={itemWithin}>{itemWithin}</a>
-                                ))}
+                                <div>
+                                    {item.tags.map(itemWithin => (
+                                        <a className={styles.tag} key={itemWithin}>{itemWithin}</a>
+                                    ))}
+                                </div>
                                 <p>
-                                    {showFullDescriptions[item.id]
-                                        ? item.description // Show full description when clicked
-                                        : `${item.description.substring(0, 50)}${item.description.length > 50 ? '...' : ''}`}
+                                    {`${item.description.substring(0, 50)}${item.description.length > 50 ? '...' : ''}`}
                                 </p>
                                 {(item.codeLink != "") && (
                                     <a href={item.codeLink} target='_blank' rel="noreferrer">
@@ -103,13 +122,13 @@ export default function Project() {
                                     <a className={styles.tag} key={itemWithin}>{itemWithin}</a>
                                 ))}
                                 <p>{projectsData[selectedCard].description}</p>
-                                {(selectedCard.codeLink != "") && (
-                                    <a href={selectedCard.codeLink} target='_blank' rel="noreferrer">
+                                {(projectsData[selectedCard].codeLink != "") && (
+                                    <a href={projectsData[selectedCard].codeLink} target='_blank' rel="noreferrer">
                                         <button className={styles.cardButton}>See code</button>
                                     </a>
                                 )}
-                                {(selectedCard.siteLink != "") && (
-                                    <a href={selectedCard.siteLink} target='_blank' rel="noreferrer">
+                                {(projectsData[selectedCard].siteLink != "") && (
+                                    <a href={projectsData[selectedCard].siteLink} target='_blank' rel="noreferrer">
                                         <button className={styles.cardButton}>Go to site</button>
                                     </a>
                                 )}

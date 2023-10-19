@@ -12,7 +12,7 @@
     "id": 1,
     "title": "Twitter Automated Blockchain Mint Bot",
     "description": "This twitter bot was made as a contribution to a web3 community, in order to increase the noise about the collection and make more people aware of this community. It was made using twitter API V2 for interacting with twitter, ExpressJS for the backend and @solana/web3.js library for interacting with the Solana Blockchain. Twitter bots can be a great way to keep your followers up to date on the latest mints of your Digital Collectibles collection. By using a Twitter bot, you can quickly and easily share the new mints with your followers, helping to create excitement and interest in your collection. This can help to increase engagement and sales, as well as give your collection more visibility and recognition. In addition, it can also be a great way to let your followers know when something new and exciting is coming out, giving them a reason to come back and check out your collection.",
-    "tags": ["Web3", "Backend"],
+    "tags": ["Web3", "Back-End"],
     "codeLink": "https://github.com/biccsdev/villinzBotV2",
     "siteLink": "https://twitter.com/villinzbot",
     "media": "/twtlogo.png"
@@ -21,7 +21,7 @@
     "id": 2,
     "title": "URL Shortener API",
     "description": "Made with NestJS and Typescript for the backend and Mongoose for the Database. This System was developed using the Module, Controller, Service, architecture where the Module was needed to allow the Mongoose and UrlShortener modules functionality to be used within the main module. The controller layer was used to intercept the API calls and call the Service layer in order to execute the business logic of the system (shorten the url).",
-    "tags": ["Backend"],
+    "tags": ["Back-End"],
     "codeLink": "https://github.com/biccsdev/urlshortener",
     "siteLink": "",
     "media": "/projects/shortUrl.jpg"
