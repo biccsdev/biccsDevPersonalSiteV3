@@ -71,7 +71,7 @@ export default function Project() {
                             <div className={styles.cardInfo}>
                                 <h2>{item.title}</h2>
                                 {item.tags.map(itemWithin => (
-                                    <a className={styles.tag}>{itemWithin}</a>
+                                    <a className={styles.tag} key={itemWithin}>{itemWithin}</a>
                                 ))}
                                 <p>
                                     {showFullDescriptions[item.id]
@@ -100,7 +100,7 @@ export default function Project() {
                                     <Image src={projectsData[selectedCard].media} alt='media related to project' height={300} width={300}></Image>
                                 </div>
                                 {projectsData[selectedCard].tags.map(itemWithin => (
-                                    <a className={styles.tag}>{itemWithin}</a>
+                                    <a className={styles.tag} key={itemWithin}>{itemWithin}</a>
                                 ))}
                                 <p>{projectsData[selectedCard].description}</p>
                                 {(selectedCard.codeLink != "") && (
