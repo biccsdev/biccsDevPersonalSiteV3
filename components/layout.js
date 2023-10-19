@@ -12,6 +12,43 @@ export default function Layout({ children }) {
     const router = useRouter();
     const [selectedLink, setSelectedLink] = useState('');
 
+    const [isDarkTheme, setIsDarkTheme] = useState(undefined);
+    const handleToggle = (event) => {
+        setIsDarkTheme(event.target.checked);
+    };
+    const getMediaQueryPreference = () => {
+        const mediaQuery = "(prefers-color-scheme: dark)";
+        const mql = window.matchMedia(mediaQuery);
+        const hasPreference = typeof mql.matches === "boolean";
+        if (hasPreference) {
+            return mql.matches ? "dark" : "light";
+        }
+    };
+    const storeUserSetPreference = (pref) => {
+        localStorage.setItem("theme", pref);
+    };
+    const getUserSetPreference = () => {
+        return localStorage.getItem("theme");
+    };
+    useEffect(() => {
+        const userSetPreference = getUserSetPreference();
+        if (userSetPreference !== null) {
+            setIsDarkTheme(userSetPreference === "dark");
+        } else {
+            const mediaQueryPreference = getMediaQueryPreference();
+            setIsDarkTheme(mediaQueryPreference === "dark");
+        }
+    }, []);
+    useEffect(() => {
+        if (typeof isDarkTheme !== "undefined") {
+            if (isDarkTheme) {
+                storeUserSetPreference("dark");
+            } else {
+                storeUserSetPreference("light");
+            }
+        }
+    }, [isDarkTheme]);
+
     const navLinks = [
         { path: '/', text: 'HOME' },
         { path: '/about', text: 'ABOUT ME' },
@@ -57,6 +94,14 @@ export default function Layout({ children }) {
                     <span className={`${styles.line} ${styles.line3}`}></span>
                 </div>
                 <div className={styles.menuItems}>
+                    <label>
+                        <input
+                            type="checkbox"
+                            checked={isDarkTheme}
+                            onChange={handleToggle}
+                        />{" "}
+                        Dark
+                    </label>
                     <div className={styles.items}>
                         {navLinks.map((link) => (
                             <Link key={link.path} href={link.path}>
