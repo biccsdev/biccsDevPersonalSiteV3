@@ -1,18 +1,32 @@
 .main {
-  --backDark: #222823;
-  --backLight: #fffaff;
+  --text: #222823;
+  --background: #fffaff;
   --highlight: #7ae582;
-  --text: #5d2e8c;
+  --highlight-secondary: #5d2e8c;
+}
+
+.mainDark {
+  --background: #222823;
+  --text: #fffaff;
+  --highlight-secondary: #7ae582;
+  --highlight: #5d2e8c;
+  color: var(--highlight-secondary);
 }
 
 .main {
   font-family: "PressStart2P", sans-serif;
-  color: var(--text);
-  background-color: var(--backLight);
+  color: var(--highlight-secondary);
+  background-color: var(--background);
 }
 
 .mainContainer {
   min-height: 100vh;
+}
+
+.mainContainerDark {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
 }
 
 .headerContainer {
@@ -23,7 +37,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--backLight);
+  background-color: var(--background);
   z-index: 2;
 }
 
@@ -124,7 +138,7 @@
 
   .headerContainer .menuItems {
     padding-top: 445px;
-    background-color: var(--backLight);
+    background-color: var(--background);
     border-color: #7ae582;
     border-style: solid;
     border-width: 7px;

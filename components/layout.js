@@ -2,6 +2,7 @@ import styles from './layout.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
+
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -11,33 +12,45 @@ export default function Layout({ children }) {
     const router = useRouter();
     const [selectedLink, setSelectedLink] = useState('');
 
-    const [darkTheme, setDarkTheme] = useState(undefined);
+    const [isDarkTheme, setIsDarkTheme] = useState(undefined);
     const handleToggle = (event) => {
-        setDarkTheme(event.target.checked);
+        setIsDarkTheme(event.target.checked);
+    };
+    const getMediaQueryPreference = () => {
+        const mediaQuery = "(prefers-color-scheme: dark)";
+        const mql = window.matchMedia(mediaQuery);
+        const hasPreference = typeof mql.matches === "boolean";
+        if (hasPreference) {
+            return mql.matches ? "dark" : "light";
+        }
     };
     const storeUserSetPreference = (pref) => {
         localStorage.setItem("theme", pref);
     };
-
+    const getUserSetPreference = () => {
+        return localStorage.getItem("theme");
+    };
     useEffect(() => {
-        const root = document.documentElement;
-        const initialColorValue = root.style.getPropertyValue(
-            "--initial-color-mode"
-        );
-        setDarkTheme(initialColorValue === "dark");
+        const userSetPreference = getUserSetPreference();
+        if (userSetPreference !== null) {
+            setIsDarkTheme(userSetPreference === "dark");
+        } else {
+            const mediaQueryPreference = getMediaQueryPreference();
+            setIsDarkTheme(mediaQueryPreference === "dark");
+        }
     }, []);
     useEffect(() => {
-        const root = document.documentElement;
-        if (darkTheme !== undefined) {
-            if (darkTheme) {
-                root.setAttribute("data-theme", "dark");
+        if (typeof isDarkTheme !== "undefined") {
+            if (isDarkTheme) {
                 storeUserSetPreference("dark");
+                console.log(localStorage.getItem("theme"))
             } else {
-                root.removeAttribute("data-theme");
                 storeUserSetPreference("light");
+                console.log(localStorage.getItem("theme"))
+
             }
         }
-    }, [darkTheme]);
+    }, [isDarkTheme]);
 
     const navLinks = [
         { path: '/', text: 'HOME' },
@@ -60,7 +73,8 @@ export default function Layout({ children }) {
 
     return (
         <>
-            <div className={styles.main}>
+            {/* <div className={styles.main}> */}
+            <div className={!isDarkTheme ? styles.main : styles.mainDark}>
                 <Head>
                     <link rel="icon" href={`${homeFavicon}`} />
                     <meta
@@ -85,16 +99,14 @@ export default function Layout({ children }) {
                         <span className={`${styles.line} ${styles.line3}`}></span>
                     </div>
                     <div className={styles.menuItems}>
-                        {darkTheme !== undefined && (
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    checked={darkTheme}
-                                    onChange={handleToggle}
-                                />{" "}
-                                Dark
-                            </label>
-                        )}
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={isDarkTheme}
+                                onChange={handleToggle}
+                            />
+                            Dark
+                        </label>
                         <div className={styles.items}>
                             {navLinks.map((link) => (
                                 <Link key={link.path} href={link.path}>
@@ -106,7 +118,9 @@ export default function Layout({ children }) {
                         </div>
                     </div>
                 </header>
-                <main className={styles.mainContainer}>{children}</main>
+                {/* <main className={styles.mainContainer}>{children}</main> */}
+                <main className={!isDarkTheme ? styles.mainContainer : styles.mainContainerDark}>{children}</main>
+
             </div >
         </>
     );
