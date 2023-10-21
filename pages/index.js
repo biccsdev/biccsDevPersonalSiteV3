@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link';
 import Layout from '../components/layout'
 import styles from '../styles/Home.module.css'
+import { useState, useEffect } from 'react';
 
 
 
@@ -9,6 +10,16 @@ Home.siteTitle = "";
 Home.description = "hi";
 Home.faviconUrl = "public/home.ico";
 export default function Home() {
+  // const [isDark, setIsDark] = useState(undefined);
+
+  // useEffect(() => {
+  //   console.log(localStorage.getItem("theme"))
+  //   if (localStorage.getItem("theme") == "dark") {
+  //     setIsDark(true);
+  //   } else {
+  //     setIsDark(false);
+  //   }
+  // })
 
   return (
     <Layout >

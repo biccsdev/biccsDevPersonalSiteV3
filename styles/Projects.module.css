@@ -138,12 +138,27 @@
     max-height: 100%;
     overflow: scroll;
   }
+
+  .cardPopUpDark {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: scroll;
+  }
 }
 
 @media (min-width: 767px) {
   .card {
     flex: none;
     max-width: calc(50% - 20px); /* For 50% width on smaller screens */
+  }
+
+  .cardPopUp {
+    max-width: 100%;
+    overflow: scroll;
+  }
+  .cardPopUpDark {
+    max-width: 100%;
+    overflow: scroll;
   }
 }
 

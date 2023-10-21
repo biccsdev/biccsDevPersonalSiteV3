@@ -7,14 +7,6 @@
   --secondary: #4b0082;
 }
 
-/* .mainDark {
-  --background: #222823;
-  --text: #fffaff;
-  --highlight-secondary: #7ae582;
-  --highlight: #5d2e8c;
-  color: var(--highlight-secondary);
-} */
-
 .main {
   font-family: "PressStart2P", sans-serif;
   color: var(--highlight-secondary);
