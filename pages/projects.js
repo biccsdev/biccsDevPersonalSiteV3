@@ -9,6 +9,7 @@ export default function Project() {
     const [projectsData, setProjectsData] = useState([]);
     const [selectedCard, setSelectedCard] = useState(null);
     const [selectedTags, setSelectedTags] = useState([]);
+    const [isDark, setIsDark] = useState(undefined);
 
 
     const openCard = (id) => {
@@ -47,6 +48,14 @@ export default function Project() {
 
         fetchData();
     }, []);
+
+    useEffect(() => {
+        if (localStorage.getItem("theme") == "dark") {
+            setIsDark(true);
+        } else {
+            setIsDark(false);
+        }
+    })
 
     // Filter projects based on selected tags
     const filteredProjects = selectedTags.length
@@ -113,7 +122,8 @@ export default function Project() {
 
                     {selectedCard !== null && (
                         <div className={styles.overlay}>
-                            <div className={styles.cardPopUp}>
+                            {/* <div className={styles.cardPopUp}> */}
+                            <div className={!isDark ? styles.cardPopUp : styles.cardPopUpDark}>
                                 <h2>{projectsData[selectedCard].title}</h2>
                                 <div className={styles.popUpImage}>
                                     <Image src={projectsData[selectedCard].media} alt='media related to project' height={300} width={300}></Image>

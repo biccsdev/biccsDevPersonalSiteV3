@@ -4,13 +4,12 @@
   --highlight: #7ae582;
   --secondHighlight: #5d2e8c;
   font-family: "Roboto";
-  color: var(--back);
-
   width: 100%;
 }
 
 .titleContainer {
   text-align: center;
+  height: 100px;
 }
 
 .mainContainer p {

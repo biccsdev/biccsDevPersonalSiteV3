@@ -3,6 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 
+import moonSVG from '../public/moon.svg';
+import sunSVG from '../public/sun.svg';
+
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -43,11 +46,8 @@ export default function Layout({ children }) {
         if (typeof isDarkTheme !== "undefined") {
             if (isDarkTheme) {
                 storeUserSetPreference("dark");
-                console.log(localStorage.getItem("theme"))
             } else {
                 storeUserSetPreference("light");
-                console.log(localStorage.getItem("theme"))
-
             }
         }
     }, [isDarkTheme]);
@@ -99,14 +99,20 @@ export default function Layout({ children }) {
                         <span className={`${styles.line} ${styles.line3}`}></span>
                     </div>
                     <div className={styles.menuItems}>
-                        <label>
+                        <label className={styles.colorToggle}>
                             <input
                                 type="checkbox"
                                 checked={isDarkTheme}
                                 onChange={handleToggle}
+                                className={styles.customCheckbox}
                             />
-                            Dark
+                            {isDarkTheme ? (
+                                <Image src={moonSVG} alt="Moon" width={50} height={50} /> // Display moon SVG when checked
+                            ) : (
+                                <Image src={sunSVG} alt="Sun" width={50} height={50} />   // Display sun SVG when unchecked
+                            )}
                         </label>
+
                         <div className={styles.items}>
                             {navLinks.map((link) => (
                                 <Link key={link.path} href={link.path}>

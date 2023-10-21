@@ -4,7 +4,6 @@
   --highlight: #7ae582;
   --secondHighlight: #5d2e8c;
   font-family: "Roboto";
-  color: var(--back);
   margin-left: 40px;
   margin-right: 40px;
 }

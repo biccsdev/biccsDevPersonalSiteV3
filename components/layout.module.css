@@ -3,15 +3,17 @@
   --background: #fffaff;
   --highlight: #7ae582;
   --highlight-secondary: #5d2e8c;
+  --main: #28fb7e;
+  --secondary: #4b0082;
 }
 
-.mainDark {
+/* .mainDark {
   --background: #222823;
   --text: #fffaff;
   --highlight-secondary: #7ae582;
   --highlight: #5d2e8c;
   color: var(--highlight-secondary);
-}
+} */
 
 .main {
   font-family: "PressStart2P", sans-serif;
@@ -19,14 +21,49 @@
   background-color: var(--background);
 }
 
-.mainContainer {
-  min-height: 100vh;
+.colorToggle {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
-.mainContainerDark {
+.customCheckbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.mainContainer {
+  min-height: 100vh;
+  color: var(--highlight-secondary);
+  background-color: var(--background);
+}
+
+/* .mainContainerDark {
   min-height: 100vh;
   background: var(--background);
   color: var(--text);
+} */
+
+@media (prefers-color-scheme: dark) {
+  .mainDark {
+    --background: #222823;
+    --text: #fffaff;
+    --highlight-secondary: #7ae582;
+    --highlight: #5d2e8c;
+    color: var(--highlight-secondary);
+  }
+  .mainContainerDark {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--highlight-secondary);
+    border-color: var(--highlight-secondary);
+    background-color: inherit;
+  }
+
+  /* .mainContainerDark .cardPopUp {
+    background-color: var(--background);
+  } */
 }
 
 .headerContainer {

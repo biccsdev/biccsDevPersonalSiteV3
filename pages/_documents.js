@@ -26,6 +26,7 @@ function setInitialColorMode() {
         return "light";
     }
     const colorMode = getInitialColorMode();
+    console.log("Hello")
     const root = document.documentElement;
     root.style.setProperty("--initial-color-mode", colorMode);
     // add HTML attribute if dark mode
