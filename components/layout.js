@@ -107,9 +107,9 @@ export default function Layout({ children }) {
                                 className={styles.customCheckbox}
                             />
                             {isDarkTheme ? (
-                                <Image src={moonSVG} alt="Moon" width={50} height={50} /> // Display moon SVG when checked
+                                <Image src={moonSVG} alt="Moon" width={50} height={50} />
                             ) : (
-                                <Image src={sunSVG} alt="Sun" width={50} height={50} />   // Display sun SVG when unchecked
+                                <Image src={sunSVG} alt="Sun" width={50} height={50} />
                             )}
                         </label>
 

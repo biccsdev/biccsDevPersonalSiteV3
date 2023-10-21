@@ -39,12 +39,6 @@
   background-color: var(--background);
 }
 
-/* .mainContainerDark {
-  min-height: 100vh;
-  background: var(--background);
-  color: var(--text);
-} */
-
 @media (prefers-color-scheme: dark) {
   .mainDark {
     --background: #222823;
@@ -60,10 +54,6 @@
     border-color: var(--highlight-secondary);
     background-color: inherit;
   }
-
-  /* .mainContainerDark .cardPopUp {
-    background-color: var(--background);
-  } */
 }
 
 .headerContainer {

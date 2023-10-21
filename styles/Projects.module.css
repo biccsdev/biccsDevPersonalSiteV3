@@ -11,22 +11,6 @@
   margin: 0 auto;
 }
 
-/* .cardsContainer {
-  margin-top: 50px;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  display: flex;
-  color: var(--back);
-  text-align: center;
-  align-items: center;
-  margin-bottom: 50px;
-} */
-
 .card h2 {
   width: 100%;
 }
@@ -71,16 +55,6 @@
   top: 5px;
   left: 5px;
 }
-
-/* @media (max-width: 769px) {
-  .card {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .cardInfo {
-    margin-left: 0px;
-  }
-} */
 
 .cardsContainer {
   margin-top: 50px;
@@ -144,12 +118,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: left;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  .cardPopUp {
-    background-color: var(--back);
-  }
-} */
 
 .popUpImage {
   margin-bottom: 10px;

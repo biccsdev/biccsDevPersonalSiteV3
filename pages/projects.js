@@ -55,7 +55,7 @@ export default function Project() {
         } else {
             setIsDark(false);
         }
-    })
+    }, [selectedCard])
 
     // Filter projects based on selected tags
     const filteredProjects = selectedTags.length
