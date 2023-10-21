@@ -46,6 +46,10 @@
     border-color: var(--highlight-secondary);
     background-color: inherit;
   }
+
+  .mainContainerDark .button54 {
+    display: hidden;
+  }
 }
 
 .headerContainer {

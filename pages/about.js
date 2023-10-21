@@ -50,7 +50,7 @@ export default function About() {
                 </div>
                 <div className={styles.downloadResumeContainer}>
                     <a href="/downloadable/resume.pdf" download="resumeVictorTorres">
-                        <button className={styles.buttonResume}>Download Resume <span className={styles.buttonSpan}></span></button>
+                        <button className={styles.buttonResume}>Download Resume </button>
                     </a>
                 </div>
                 <div className={styles.techStackContainer}>

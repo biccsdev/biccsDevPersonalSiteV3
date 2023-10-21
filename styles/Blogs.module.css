@@ -28,8 +28,10 @@
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: var(--secondHighlight);
-  color: var(--highlight);
+  /* background-color: var(--secondHighlight);
+  color: var(--highlight); */
+  background-color: inherit;
+  color: inherit;
   cursor: pointer;
   border: 3px solid;
   padding: 0.25em 0.5em;
