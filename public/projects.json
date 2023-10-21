@@ -30,7 +30,7 @@
     "id": 3,
     "title": "Chat App API",
     "description": "This chat app was made with NodeJs implementing ExpressJS and Mongoose for the backend, and Html, css and JS vanilla for the Frontend. This app makes use of websocket for bi-directional, full-duplex communication between the client and server. Websockets allow for real-time communication between the two endpoints, allowing for faster and more efficient communication.",
-    "tags": ["Backend"],
+    "tags": ["Back-End"],
     "codeLink": "https://github.com/biccsdev/chatApp",
     "siteLink": "",
     "media": "/projects/chatAppLogo.png"
