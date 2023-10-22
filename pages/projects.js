@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Layout from '../components/layout'
 import styles from '../styles/Projects.module.css'
 import React, { useState, useEffect } from 'react';
+import { NextSeo } from 'next-seo';
+
 
 
 export default function Project() {
@@ -66,26 +68,16 @@ export default function Project() {
 
     return (
         <Layout >
-            <Head>
-                <link rel='shortcut icon' href='/projects.ico' />
-                <title>
-                    Software Engineer projects | Web Development, Frontend, Backend, APIS, Fullstack
-                </title>
-                <meta
-                    name="description"
-                    content="Projects portfolio"
-                    key="desc"
-                />
-                <meta property="og:title" content="Junior developer projects | Web 2, Web 3, Frontend, Backend, APIS" />
-                <meta
-                    property="og:description"
-                    content={`Check out @biccs's latest public projects`}
-                />
-                <meta
-                    property="og:image"
-                    content="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                />
-            </Head>
+            <NextSeo
+                title='Projects'
+                description='Showcase of my most recent public developments'
+                additionalLinkTags={[
+                    {
+                        rel: 'icon',
+                        href: '/projects.ico',
+                    }
+                ]}
+            />
             <main className={styles.mainContainer}>
                 <div className={styles.tagsContainer}>
                     <button className={styles.cardButton} onClick={() => handleTagClick('All')}>All</button>

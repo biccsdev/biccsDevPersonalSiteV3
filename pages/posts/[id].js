@@ -1,7 +1,9 @@
 import Layout from "../../components/layout";
 import styles from "../../styles/Posts.module.css";
 import { useRouter } from 'next/router';
+import { NextSeo, ArticleJsonLd } from 'next-seo';
 import React, { useState, useEffect } from 'react';
+import Image from "next/image";
 
 export default function Post() {
     const router = useRouter();
@@ -46,10 +48,49 @@ export default function Post() {
 
     return (
         <Layout>
+            <NextSeo
+                title={blogData.title}
+                description={blogData.seoDescription}
+                openGraph={{
+                    title: blogData.title,
+                    description: blogData.seoDescription,
+                    url: `https://biccs.tech${router.asPath}`,
+                    type: 'article',
+                    images: [
+                        {
+                            url: blogData.image,
+                            width: 850,
+                            height: 650,
+                            alt: blogData.imageAlt,
+                        },
+                    ],
+                }}
+                additionalLinkTags={[
+                    {
+                        rel: 'icon',
+                        href: '/blogs.ico',
+                    }
+                ]}
+            />
+            <ArticleJsonLd
+                type="BlogPosting"
+                url={`https://biccs.tech${router.asPath}`}
+                title={blogData.title}
+                images={[
+                ]}
+                datePublished={blogData.seoDate}
+                dateModified={blogData.seoDateLastModified}
+                authorName="biccs"
+                description={blogData.seoDescription}
+            />
             <div className={styles.mainContainer}>
+
                 <div className={styles.titleContainer}>
                     <h1>{blogData.title}</h1>
-                    <h3>Author: @biccs</h3>
+                    <h3>Author: @biccs | Date: {blogData.date}</h3>
+                </div>
+                <div className={styles.blogImage}>
+                    <Image src={blogData.image} alt={blogData.imageAlt} width={400} height={400} />
                 </div>
                 {renderContent()}
             </div>

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link';
 import Layout from '../components/layout'
 import styles from '../styles/Home.module.css'
-import { useState, useEffect } from 'react';
+import { NextSeo } from 'next-seo';
 
 
 
@@ -10,39 +10,19 @@ Home.siteTitle = "";
 Home.description = "hi";
 Home.faviconUrl = "public/home.ico";
 export default function Home() {
-  // const [isDark, setIsDark] = useState(undefined);
-
-  // useEffect(() => {
-  //   console.log(localStorage.getItem("theme"))
-  //   if (localStorage.getItem("theme") == "dark") {
-  //     setIsDark(true);
-  //   } else {
-  //     setIsDark(false);
-  //   }
-  // })
 
   return (
     <Layout >
-      <Head>
-        <link rel='shortcut icon' href='/home.ico' />
-        <title>
-          Welcome to the site | lets build software together
-        </title>
-        <meta
-          name="description"
-          content="Latest version of biccsdev's portfolio, find projects, blogs and get in touch | Web Development, Web 3, Javascript, Backend, Frontend "
-          key="desc"
-        />
-        <meta property="og:title" content="Software Engineer portfolio | @biccsdev" />
-        <meta
-          property="og:description"
-          content="Check out my latest projects and articles. Find the links to all my social media. Lets build together!"
-        />
-        <meta
-          property="og:image"
-          content="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-        />
-      </Head>
+      <NextSeo
+        title='Home'
+        description='Welcome to my portfolio!'
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: '/home.ico',
+          }
+        ]}
+      />
       <div className={styles.main}>
         <div className={styles.title}>
           <h1>Hi, I'm Victor Torres, a Software Engineer based in Mexico.</h1>

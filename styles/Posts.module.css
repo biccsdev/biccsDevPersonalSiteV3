@@ -21,3 +21,10 @@
 .paragraph {
   padding-bottom: 34px;
 }
+
+.blogImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

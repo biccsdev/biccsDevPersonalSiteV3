@@ -4,6 +4,8 @@ import Layout from '../components/layout'
 import styles from '../styles/Blogs.module.css'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { NextSeo } from 'next-seo';
+
 
 
 export default function Blog({ blog }) {
@@ -29,32 +31,24 @@ export default function Blog({ blog }) {
 
     return (
         <Layout >
-            <Head>
-                <link rel='shortcut icon' href='/blogs.ico' />
-                <title>
-                    Blog about software development and technology in general | Web development | Virtual Reality
-                </title>
-                <meta
-                    name="description"
-                    content="Tech blog written by a developer"
-                    key="desc"
-                />
-                <meta property="og:title" content={`biccs's blog | Check the latest post!`} />
-
-                <meta
-                    property="og:image"
-                    content="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                />
-            </Head>
+            <NextSeo
+                title='Blogs'
+                description='Peak inside my mind with these blog entries'
+                additionalLinkTags={[
+                    {
+                        rel: 'icon',
+                        href: '/blogs.ico',
+                    }
+                ]}
+            />
             <div className={styles.mainContainer}>
                 {blogData.map(item => (
                     <div key={item.id} className={styles.blogCard}>
                         <div className={styles.cardText}>
-                            <h1>{item.title}</h1>
-                            <h3>{item.content.slice(0, 100)}...</h3>
+                            <h1>{item.title} - <span className={styles.date}>{item.date}</span></h1>
                         </div>
                         <Link href={`/posts/${item.id}`}>
-                            <button className={styles.readButton} id="myBtn">Read more</button>
+                            <button className={styles.readButton} id="myBtn">Read</button>
                         </Link>
                     </div>
                 ))}

@@ -18,8 +18,10 @@
 
 .cardText {
   width: 80%;
-  margin-left: 25px;
-  margin-right: 25px;
+}
+
+.date {
+  font-size: 24px;
 }
 
 .readButton {
@@ -42,6 +44,8 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   height: fit-content;
+  padding: 10px 20px;
+  margin-left: 10px;
 }
 
 .readButton:hover {
@@ -50,16 +54,31 @@
   left: 5px;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
+  .mainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center the items */
+  }
+
   .blogCard {
-    display: block;
+    font-size: 10px;
+    width: fit-content;
+    margin-left: 160px;
   }
 
-  .blogCard img {
-    margin-left: 25%;
+  .cardText {
+    width: 60%;
   }
 
-  .readButton {
-    margin-left: 25%;
+  .date {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 426px) {
+  .blogCard {
+    margin-left: 60px;
   }
 }
