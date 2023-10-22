@@ -90,7 +90,7 @@ export default function Post() {
                     <h3>Author: @biccs | Date: {blogData.date}</h3>
                 </div>
                 <div className={styles.blogImage}>
-                    <Image src={blogData.image} alt={blogData.imageAlt} width={400} height={400} />
+                    <Image className={styles.image} src={blogData.image} alt={blogData.imageAlt} width={400} height={400} />
                 </div>
                 {renderContent()}
             </div>
