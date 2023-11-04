@@ -87,7 +87,7 @@ export default function Post() {
 
                 <div className={styles.titleContainer}>
                     <h1>{blogData.title}</h1>
-                    <h3>Author: @biccs | Date: {blogData.date}</h3>
+                    <h3>Author: <a style={{ color: '#5d2e8c', textDecoration: 'underline' }} href="https://twitter.com/itsbiccs" target="_blank">@biccs</a> | Date: {blogData.date}</h3>
                 </div>
                 <div className={styles.blogImage}>
                     <Image className={styles.image} src={blogData.image} alt={blogData.imageAlt} width={400} height={400} />
