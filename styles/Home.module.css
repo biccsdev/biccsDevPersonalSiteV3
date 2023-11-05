@@ -10,11 +10,50 @@
   align-items: center;
 }
 
+.welcomeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogsContainer {
+  padding-top: 20px;
+  width: 40%;
+}
+.blogsContainer .blogCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .blogsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center the items */
+  }
+
+  .blogCard {
+    font-size: 10px;
+    width: fit-content;
+    margin-left: 160px;
+  }
+
+  .cardText {
+    width: 60%;
+  }
+
+  .date {
+    font-size: 10px;
+  }
+}
+
 .title {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
   align-items: center;
   justify-content: center;
   font-size: 15px;
@@ -41,11 +80,10 @@
 
 .description {
   width: 100%;
-  text-align: center;
   align-items: center;
   justify-content: center;
   margin: 10px;
-  font-size: 13px;
+  font-size: 10px;
 }
 
 .button54 {
@@ -69,25 +107,6 @@
   touch-action: manipulation;
 }
 
-/* .button54Dark {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  background-color: var(--text);
-  color: var(--highlight);
-  cursor: pointer;
-  border: 3px solid;
-  padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
-    5px 5px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-} */
-
 .button54:hover {
   box-shadow: 0px 0px 0px 0px;
   top: 5px;
@@ -95,9 +114,6 @@
 }
 
 @media (min-width: 768px) {
-  .main {
-    padding-top: 80px;
-  }
   .title {
     display: flex;
     flex-wrap: nowrap;
@@ -119,11 +135,6 @@
   }
   .description {
     width: 80%;
-    padding-top: 40px;
-    text-align: justify;
-  }
-  .contact {
-    padding-top: 30px;
   }
   .button54 {
     padding: 0.25em 0.75em;
@@ -131,12 +142,13 @@
 }
 
 @media (min-width: 1024px) {
-  .main {
-    padding-top: 80px;
-  }
   .title {
     display: flex;
     flex-wrap: nowrap;
+  }
+
+  .cardText {
+    font-size: 13px;
   }
 
   .titleImage {
@@ -157,16 +169,14 @@
   }
   .description {
     width: 100%;
+    font-size: 13px;
     text-align: center;
-    text-align: justify;
   }
   .description h2 {
     width: 40%;
     margin: 0 auto;
   }
-  .contact {
-    padding-top: 30px;
-  }
+
   .button54 {
     padding: 0.25em 0.75em;
   }
@@ -175,6 +185,21 @@
 @media (min-width: 1024px) {
   .textContainer {
     font-size: 80px;
+  }
+  .date {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 426px) {
+  .main .welcomeContainer {
+    font-size: 10px;
+  }
+  .blogCard {
+    margin-left: 60px;
+  }
+  .description {
+    padding-left: 25px;
   }
 }
 
