@@ -27,6 +27,52 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 30px;
+}
+
+.dataContainer {
+  width: 100%;
+}
+
+.dataContainer p {
+  padding-bottom: 20px;
+}
+
+.dataContainer h2 {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+}
+
+.dataContainer h3 {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+}
+
+.dataContainer h4 {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+}
+
+.dataContainer a {
+  text-decoration: underline;
+}
+
+.dataContainer img {
+  width: 100%;
+  margin: 20px 0 20px 0;
+}
+
+.dataContainer ul {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.dataContainer ol {
+  width: 70%;
+  margin: 0 auto;
 }
 
 @media (max-width: 426px) {

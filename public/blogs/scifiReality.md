@@ -25,4 +25,4 @@ One of two things were predicted to become reality: matter teleportation and bri
 
 What an exciting time to be alive! We are living in the right era to accelerate and achieve all these technological advancements. Join me on my journey to raise awareness about the current technological state of the world. Have a great journey, and keep building!
 
-####Thank you for taking the time to read this article!
+#### Thank you for taking the time to read this article!

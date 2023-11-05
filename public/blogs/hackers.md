@@ -11,7 +11,8 @@ There are several categories that later arose from the misuse of the word hacker
 - **Grey hat** - This type of person lies between black and white hat. A grey hat may surf the internet and hack into any software system that they can, not to steal information but for the sole purpose of notifying the administrator that their system has flaws and how to solve them. They were not asked to do this, but neither did they have bad intentions in doing so, hence the term. They may even offer to solve the flaws for free, just because they enjoy doing so, or for a fee.
 - **Script Kiddies** - This type of “cracker” is the least respected among all. While the last ones had a high technical knowledge, with know-how in systems architecture and computer programming, which they put to use in cracking systems, script kiddies are just mortal crackers with very basic computer programming knowledge. They get away with hacking by using other people’s code and scripts that were programmed by skilled crackers to execute their illegal activities, usually with little to no understanding of how these tools work.
 
-###So, what is a hacker then?
+### So, what is a hacker then?
+
 We all remember the movie “The Matrix” where Neo is a hacker who discovers the truth about the artificial reality created by machines and joins a group fighting against them. This case serves as a good example of what a hacker is, with a connotation that isn't necessarily negative. Originally, a hacker simply meant an advanced computer technology enthusiast and an adherent of the programming subculture. Its core values are the intellectual challenge of creatively overcoming the limitations of software systems or electronic hardware to achieve novel and clever outcomes. The act of engaging in activities such as programming in a spirit of experimentation and exploration is what hacking actually means.
 
 One of my favorite hacking activities is trying to come up with novel solutions for different problems, finding ways to do things that are not usually done, aiming to improve the experience of achieving the goal, reducing the friction of the activity for future users, finding a clear path, and documenting my way of doing things for others to understand my thought process, why and how I came up with the solution, so they can come up with a better one.
@@ -24,4 +25,4 @@ Now the system is not done yet as I’m writing this article instead of working 
 
 I hope this text helped you internalize what a hacker actually is, and let me let you know that we all are hackers at some point in life, maybe some more frequently than others, but it doesn't matter. At our core, when facing a problem, humans should aim to look at the possible solutions and experimenting, instead of focusing and worrying about the problem itself.
 
-####Thanks for taking the time to read this article! and Happy Hacking!
+#### Thanks for taking the time to read this article! and Happy Hacking!

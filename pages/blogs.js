@@ -14,7 +14,7 @@ export default function Blog({ blog }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('/blogs.json');
+                const response = await fetch('/blogs/blogs.json');
                 if (response.ok) {
                     const data = await response.json();
                     setBlogData(data);

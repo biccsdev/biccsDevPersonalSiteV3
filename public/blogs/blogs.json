@@ -3,13 +3,13 @@
     "id": "automated-my-city-baseball-team-social-media-account",
     "title": "Automated my city's baseball team social media account",
     "tags": ["projects"],
-    "date": "03/nov/2023",
-    "seoDate": "2023-11-03:00:00+08:00",
-    "seoDateLastModified": "2023-11-03:00:00+08:00",
+    "date": "04/nov/2023",
+    "seoDate": "2023-11-04:00:00+08:00",
+    "seoDateLastModified": "2023-11-04:00:00+08:00",
     "seoDescription": "Learn how to automate Twitter updates with a Raspberry Pi-powered bot. Explore web scraping, Node.js coding, and self-contained microcontroller deployment. Dive into the world of code and creativity.",
     "image": "/blogImage/baseballBot/raspiBaseball.jpeg",
     "imageAlt": "prompt (dalle-3) a baseball MLB stadium pixel art isometric view, inside a raspberry pi microcontroller and the scoreboard showing twitter branding and one team is called cañeros",
-    "contentPath": "./baseballBot.md"
+    "contentPath": "baseballBot.md"
   },
   {
     "id": "being-a-hacker-is-not-what-you-think",
@@ -21,7 +21,7 @@
     "seoDescription": "Dive into the intriguing world of hacking through a different lens on our blog, 'I'm a Hacker, But It's Not What You Think.' Unravel the truth behind hacking as we explore its various aspects",
     "image": "/blogImage/hackers.jpeg",
     "imageAlt": "prompt (dalle-3) Create a visually stunning cyberpunk masterpiece reminiscent of a UFC poster. Picture two enigmatic hackers, both donning the iconic anonymous mask, facing off in the neon-drenched streets of Night City. One wears a white hat symbolizing ethical hacking, while the other sports a black hat representing the darker side of cybernetic exploration. Their intense confrontation is framed against the backdrop of a futuristic metropolis illuminated by neon lights, casting an eerie glo",
-    "contentPath": "./hackers.md"
+    "contentPath": "hackers.md"
   },
   {
     "id": "scifi-to-reality-creating-tomorrow-world-today",
@@ -33,7 +33,7 @@
     "seoDescription": "Unlock the Future of Technology with Cutting-Edge Solutions | Discover Innovations in AI, VR, and More | Stay Informed and Stay Ahead",
     "image": "/blogImage/scifitoreality.jpeg",
     "imageAlt": "prompt (dalle-3) in disney style, imagine a person building a sci-fi building with a hammer",
-    "contentPath": "./scifiReality.md"
+    "contentPath": "scifiReality.md"
   },
   {
     "id": "web-3-introduction",
@@ -45,7 +45,7 @@
     "seoDescription": "Unlocking Web3: From the Evolution of the Internet to Future Possibilities",
     "image": "/blogImage/web3introduction.jpeg",
     "imageAlt": "imaginative and visually captivating narrative set in the Web3-powered Metaverse, where users explore a 3D world filled with interconnected communities, virtual economies, and boundless creativity",
-    "contentPath": "./web3.md"
+    "contentPath": "web3.md"
   },
   {
     "id": "how-to-create-the-Metaverse",
@@ -57,6 +57,6 @@
     "seoDescription": "Exploring the Metaverse: Web3, Blockchain, and the Future of Interaction",
     "image": "/blogImage/howtocreatethemetaverse.jpeg",
     "imageAlt": "vivid and futuristic scene in the Metaverse, where users navigate a world built on blockchain technology and Web3 principles, reimagining the concept of ownership, interaction, and identity ",
-    "contentPath": "./metaverse.md"
+    "contentPath": "metaverse.md"
   }
 ]

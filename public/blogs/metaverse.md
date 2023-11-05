@@ -1,4 +1,4 @@
-# The Metaverse: Building the Future
+## The Metaverse: Building the Future
 
 We are on the cusp of an exciting era, where we're shaping the future of how we interact with society. If you're intrigued by this topic, an exciting adaptation to our near future awaits. Imagine a tool that enables us to connect with people from all corners of the world, explore worlds born out of community creativity, engage in commerce, create content, establish communities, and essentially, it's the internet we have today but with a twist: the Metaverse. In the Metaverse, all these interactions occur in a 3D world, whether it's a fully virtual realm or a mixed-reality environment where virtual elements blend with the real world. While our current Metaverse exists in 2D and is accessed through computers, phones, consoles, and smart speakers, the future Metaverse's primary focus will be virtual reality and augmented reality devices.
 
@@ -38,4 +38,4 @@ Virtual reality and augmented reality technologies are essential for realizing t
 
 Here's a proposed concept: create a virtual world accessible through a web browser or a native application. In this world, properties and streets connect, and ownership of properties is defined by NFTs through smart contracts. These properties host servers that enable various systems, with interaction supported via virtual reality or augmented reality. Properties can range from stores with point-of-sale systems to offices with assistant systems or even video game rooms. Streets represent connections between these properties, forming cities where users can navigate, make purchases, start businesses, and establish personalized homes. This universe operates on technologies that empower users to create and control it.
 
-####Thank you for taking the time to read this text! :D
+#### Thank you for taking the time to read this text! :D
