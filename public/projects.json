@@ -1,6 +1,24 @@
 [
   {
     "id": 0,
+    "title": "Apartment Rental System",
+    "description": "This project solves the problem of managing the booking and payments for apartment booking through a private system for apartment owners, and gives the user an easy experience to book their favorite destinations. This project was built with NextJs with React for managing and building all the frontend and Tailwind for the styles. Contains the code for an Apartment booking web service, where a user can view all the apartment offerings available and book a date through the site, the user also can manage the payment and manage the access to the apartment after payment. ",
+    "tags": ["Front-End", "Back-End"],
+    "codeLink": "https://github.com/biccsdev/apartmentRenting",
+    "siteLink": "",
+    "media": "/projects/apartmentDiagrams.png"
+  },
+  {
+    "id": 1,
+    "title": "Baseball Twitter Bot",
+    "description": "In this project, I embarked on automating a Twitter account for a baseball team using web scraping. Faced with the absence of a suitable API for real-time game data, I explored web scraping as a technique to extract information from the team's website. The bot's requirements were identified, leading to the design of a solution with distinct components: Index.js, which orchestrates the process; Scrape.js, responsible for data scraping and analysis; HelperStore.js, managing data persistence; and TwitterConfig.js, establishing the connection with the Twitter account. The project was locally hosted on a Raspberry Pi 4B, with challenges arising from Node version discrepancies. The specific version of Node required for compatibility was installed, ultimately resulting in a successfully deployed bot. The automated Twitter account, operational on the Raspberry Pi, has effectively tweeted game outcomes, demonstrating the practical implementation of web scraping for real-time data retrieval.",
+    "tags": ["Back-End"],
+    "codeLink": "https://github.com/biccsdev/baseball_twitter_bot",
+    "siteLink": "https://twitter.com/GanaronCaneros",
+    "media": "/blogImage/baseballBot/ganaronTweet.png"
+  },
+  {
+    "id": 2,
     "title": "Blockchain Token Gated System",
     "description": "This is an app I made as a proof of concept about token gated content as a use case for web3, made with NextJS for the front-end and Metaplex, Anchor and @solana/web3.js for the token gated system implementation. This is done to incentivize users to take part in a platform, or to provide exclusive access to certain content or services. Token gating can be used to create loyalty programs, reward content creators, or to drive user engagement.",
     "tags": ["Web3", "Front-End"],
@@ -9,7 +27,7 @@
     "media": "/projects/videoSMB.gif"
   },
   {
-    "id": 1,
+    "id": 3,
     "title": "Twitter Automated Blockchain Mint Bot",
     "description": "This twitter bot was made as a contribution to a web3 community, in order to increase the noise about the collection and make more people aware of this community. It was made using twitter API V2 for interacting with twitter, ExpressJS for the backend and @solana/web3.js library for interacting with the Solana Blockchain. Twitter bots can be a great way to keep your followers up to date on the latest mints of your Digital Collectibles collection. By using a Twitter bot, you can quickly and easily share the new mints with your followers, helping to create excitement and interest in your collection. This can help to increase engagement and sales, as well as give your collection more visibility and recognition. In addition, it can also be a great way to let your followers know when something new and exciting is coming out, giving them a reason to come back and check out your collection.",
     "tags": ["Web3", "Back-End"],
@@ -18,7 +36,7 @@
     "media": "/twtlogo.png"
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "URL Shortener API",
     "description": "Made with NestJS and Typescript for the backend and Mongoose for the Database. This System was developed using the Module, Controller, Service, architecture where the Module was needed to allow the Mongoose and UrlShortener modules functionality to be used within the main module. The controller layer was used to intercept the API calls and call the Service layer in order to execute the business logic of the system (shorten the url).",
     "tags": ["Back-End"],
@@ -27,7 +45,7 @@
     "media": "/projects/shortUrl.jpg"
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "Chat App API",
     "description": "This chat app was made with NodeJs implementing ExpressJS and Mongoose for the backend, and Html, css and JS vanilla for the Frontend. This app makes use of websocket for bi-directional, full-duplex communication between the client and server. Websockets allow for real-time communication between the two endpoints, allowing for faster and more efficient communication.",
     "tags": ["Back-End"],
@@ -36,7 +54,7 @@
     "media": "/projects/chatAppLogo.png"
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "Token Gated Solana Wallets Explorer & Mint Site",
     "description": "This system was build using NextJS and Typescript with @Solana/web3.js library to be able to connect to the Blockchain. It allows holders of certain token to access the wallet finder system, where they input a Wallet Address and retrieve those wallet's assets. It also stores a Mint Site for a Solana Collection",
     "tags": ["Web3", "Front-End"],
