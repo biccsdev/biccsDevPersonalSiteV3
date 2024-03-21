@@ -40,9 +40,9 @@ export default function About() {
                     </div>
                 </div>
                 <div className={styles.downloadResumeContainer}>
-                    <a href="/downloadable/resume.pdf" download="resumeVictorTorres">
+                    {/* <a href="/downloadable/resume.pdf" download="resumeVictorTorres">
                         <button className={styles.buttonResume}>Download Resume </button>
-                    </a>
+                    </a> */}
                 </div>
                 <div className={styles.techStackContainer}>
                     <h1>Tech Stack</h1>
